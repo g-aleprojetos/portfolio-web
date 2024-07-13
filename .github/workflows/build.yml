@@ -39,78 +39,78 @@ jobs:
   #                              #
   ################################
 
-  # deploy-Homologation:
-  #   runs-on: ubuntu-latest
-  #   environment:
-  #     name: Homologation
-  #   needs: tests
-  #   steps:
-  #     - name: Deploy Project
-  #       uses: actions/checkout@v2
+  deploy-Homologation:
+    runs-on: ubuntu-latest
+    environment:
+      name: Homologation
+    needs: tests
+    steps:
+      - name: Deploy Project
+        uses: actions/checkout@v2
 
-  #     - name: Setup Node.js
-  #       uses: actions/setup-node@v1
-  #       with:
-  #         node-version: 20
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 20
 
-  #     - name: Build web-app
-  #       run: |
-  #         npm install --frozen-lockfile
-  #         npm run build
+      - name: Build web-app
+        run: |
+          npm install --frozen-lockfile
+          npm run build
 
-  #     - name: Deploy to homologation-page
-  #       uses: peterjgrainger/action-create-branch@v2.2.0
-  #       env:
-  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  #       with:
-  #         branch: 'Homologation-Page'
+      - name: Deploy to homologation-page
+        uses: peterjgrainger/action-create-branch@v2.2.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          branch: 'Homologation-Page'
 
-  #     - name: checking out code
-  #       uses: actions/checkout@v2
+      - name: checking out code
+        uses: actions/checkout@v2
 
-  #     - name: extract git commit data
-  #       uses: rlespinasse/git-commit-data-action@v1.x
+      - name: extract git commit data
+        uses: rlespinasse/git-commit-data-action@v1.x
 
-  #     - name: Update author information
-  #       run: echo ${{ env.GIT_COMMIT_AUTHOR_NAME }} > AUTHOR
+      - name: Update author information
+        run: echo ${{ env.GIT_COMMIT_AUTHOR_NAME }} > AUTHOR
 
-  #     - name: Raise PR 1
-  #       id: homologation-1
-  #       uses: peter-evans/create-pull-request@v3
-  #       with:
-  #         branch: 'Homologation-Page'
-  #         base: development
-  #         title: 'Homologation for auto pr1'
-  #         committer: ${{ env.GIT_COMMIT_AUTHOR_NAME }} <${{ env.GIT_COMMIT_AUTHOR_EMAIL }}">
-  #         author: ${{ env.GIT_COMMIT_AUTHOR_NAME }} <${{ env.GIT_COMMIT_AUTHOR_EMAIL }}">
-  #         body: This is to show automatic PR creation
-  #         token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Raise PR 1
+        id: homologation-1
+        uses: peter-evans/create-pull-request@v3
+        with:
+          branch: 'Homologation-Page'
+          base: development
+          title: 'Homologation for auto pr1'
+          committer: ${{ env.GIT_COMMIT_AUTHOR_NAME }} <${{ env.GIT_COMMIT_AUTHOR_EMAIL }}">
+          author: ${{ env.GIT_COMMIT_AUTHOR_NAME }} <${{ env.GIT_COMMIT_AUTHOR_EMAIL }}">
+          body: This is to show automatic PR creation
+          token: ${{ secrets.GITHUB_TOKEN }}
 
   ################################
   #                              #
   #       deploy-Production      #
   #                              #
   ################################
-  # deploy-Production:
-  #   runs-on: ubuntu-latest
-  #   environment:
-  #     name: Production
-  #   needs: deploy-Homologation
-  #   steps:
-  #     - name: Deploy Project
-  #       uses: actions/checkout@v2
+  deploy-Production:
+    runs-on: ubuntu-latest
+    environment:
+      name: Production
+    needs: deploy-Homologation
+    steps:
+      - name: Deploy Project
+        uses: actions/checkout@v2
 
-  #     - name: Setup Node.js
-  #       uses: actions/setup-node@v1
-  #       with:
-  #         node-version: 20
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 20
 
-  #     - name: Build web-app
-  #       run: |
-  #         npm install --frozen-lockfile
-  #         npm run build
-  #     - name: Deploy to GitHub Pages
-  #       uses: peaceiris/actions-gh-pages@v3
-  #       with:
-  #         github_token: ${{ secrets.GITHUB_TOKEN }}
-  #         publish_dir: ./build
+      - name: Build web-app
+        run: |
+          npm install --frozen-lockfile
+          npm run build
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
