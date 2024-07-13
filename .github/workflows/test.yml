@@ -1,0 +1,31 @@
+name: tests
+
+on:
+  pull_request:
+    branches:
+      - development
+
+jobs:
+  deploy:
+    name: Test code
+    runs-on: ubuntu-latest
+
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    steps:
+      - name: Deploy Project
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 20
+
+      - name: Install Dependency
+        run: npm install
+
+      - name: Run test
+        run: npm run test
