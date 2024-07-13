@@ -2,6 +2,6 @@
   "*.{js,jsx,ts,tsx}": [
     "prettier --write",
     "eslint -c .eslintrc.json --fix",
-    "npm test -- --watchAll=false --bail "
+    "npm test -- --watchAll=false --bail"
   ]
 }

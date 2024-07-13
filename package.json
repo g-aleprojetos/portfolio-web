@@ -2,6 +2,7 @@
   "name": "portifolio-web",
   "version": "0.1.0",
   "private": true,
+  "homepage": "portfolio-web/",
   "dependencies": {
     "@babel/plugin-transform-class-properties": "^7.24.7",
     "@babel/plugin-transform-nullish-coalescing-operator": "^7.24.7",
@@ -14,7 +15,7 @@
     "@jridgewell/sourcemap-codec": "^1.5.0",
     "@rollup/plugin-terser": "^0.4.4",
     "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
+    "@testing-library/react": "^16.0.0",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.101",
@@ -33,7 +34,7 @@
     "commit": "cz",
     "start": "react-scripts start",
     "coverage": "react-scripts test --coverage --watchAll=false",
-    "test": "react-scripts test --watchAll=false",
+    "test": "cross-env CI=true react-scripts test --watchAll=false",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "prepare": "husky install",
@@ -59,9 +60,9 @@
   },
   "devDependencies": {
     "@babel/plugin-transform-private-property-in-object": "^7.24.7",
-    "@eslint/js": "^9.6.0",
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
+    "@eslint/js": "^9.6.0",
     "commitizen": "4.3.0",
     "cross-env": "^7.0.3",
     "cz-conventional-changelog": "3.3.0",
@@ -79,7 +80,13 @@
   },
   "config": {
     "commitizen": {
-      "path": "cz-conventional-changelog"
+      "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "jest": {
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/src/index\\.tsx?$"
+    ]
   }
 }
