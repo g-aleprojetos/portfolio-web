@@ -254,30 +254,28 @@ test('Container DEVE ser igual ao snapshot', () => {
 ```
 
 ```typescript
-// OrdensDeServicoAbertasPage.styles.tsx
-import styled from 'styled-components/native'
+// App.styles.ts
+import styled from 'styled-components';
 
-type ContainerProps = {
-  primary: boolean
-}
+export const App = styled.div`
+  text-align: center;
+`;
 
-export const Container = styled.View<ContainerProps>`
-  color: ${(props) => (props.primary ? 'blue' : 'red')};
-`
 
-// OrdensDeServicoAbertasPage.styles.spec.tsx
-import React, {render} from 'react'
-import {Container} from './OrdensDeServicoAbertasPage.styles'
+// App.styles.spec.tsx
+import React from 'react';
+import {render} from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect';
+import 'jest-styled-components';
+import * as S from '../App.styles';
 
-describe('OrdensDeServicoAbertasPage.styles', () => {
-  test('Container DEVE ter a cor vermelha QUANDO a propriedade primaria é definida', () => {
-    const {container} = render(<Container primaria />)
-    expect(container).toHaveStyleRule('color', 'red')
-  })
+describe('App.styles', () => {
+  test('App DEVE ser igual ao snapshot', () => {
+    const {container} = render(<S.App />);
+    expect(container).toMatchSnapshot();
+  });
 })
 ```
-
-Obs: O teste acima usa o _react-test-renderer_
 
 Para executar os testes use o comando:
 
