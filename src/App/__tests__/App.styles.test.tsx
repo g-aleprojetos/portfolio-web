@@ -10,8 +10,23 @@ describe('App.styles', () => {
     expect(container).toMatchSnapshot();
   });
 
+  test('Botao DEVE ser igual ao snapshot', () => {
+    const {container} = render(<S.Botao data-escolhido={true} />);
+    expect(container).toMatchSnapshot();
+  });
+
+  test('ContainerBotoes DEVE ser igual ao snapshot', () => {
+    const {container} = render(<S.ContainerBotoes />);
+    expect(container).toMatchSnapshot();
+  });
+
   test('Header DEVE ser igual ao snapshot', () => {
     const {container} = render(<S.Header />);
+    expect(container).toMatchSnapshot();
+  });
+
+  test('Item DEVE ser igual ao snapshot', () => {
+    const {container} = render(<S.Item />);
     expect(container).toMatchSnapshot();
   });
 
@@ -25,8 +40,23 @@ describe('App.styles', () => {
     expect(container).toMatchSnapshot();
   });
 
+  test('Main DEVE ser igual ao snapshot', () => {
+    const {container} = render(<S.Main />);
+    expect(container).toMatchSnapshot();
+  });
+
+  test('Nav DEVE ser igual ao snapshot', () => {
+    const {container} = render(<S.Nav />);
+    expect(container).toMatchSnapshot();
+  });
+
   test('Texto DEVE ser igual ao snapshot', () => {
     const {container} = render(<S.Texto />);
+    expect(container).toMatchSnapshot();
+  });
+
+  test('TextoHeader DEVE ser igual ao snapshot', () => {
+    const {container} = render(<S.TextoHeader />);
     expect(container).toMatchSnapshot();
   });
 });
