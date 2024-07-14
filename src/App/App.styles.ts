@@ -1,5 +1,9 @@
 import styled, {keyframes} from 'styled-components';
 
+interface IApp {
+  'data-escolhido': boolean;
+}
+
 const spin = keyframes`
   from {
     transform: rotate(0deg);
@@ -11,17 +15,33 @@ const spin = keyframes`
 
 export const App = styled.div`
   text-align: center;
+  min-height: 100vh;
+  background-color: #282c34;
 `;
 
-export const Header = styled.header`
-  background-color: #282c34;
-  min-height: 100vh;
+export const Botao = styled.button<IApp>`
+  width: 100px;
+  height: 30px;
+  margin: 10px;
+  background-color: ${props => (props['data-escolhido'] ? '#aff' : '#aaa')};
+`;
+
+export const ContainerBotoes = styled.div`
+  margin-top: 20px;
+  margin-bottom: 50px;
+`;
+
+export const Header = styled.div`
   display: flex;
-  flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
+  height: 100px;
+  background-color: #202024;
+`;
+
+export const Item = styled.a`
+  margin: 10px;
 `;
 
 export const Link = styled.a`
@@ -37,4 +57,24 @@ export const Logo = styled.img`
   }
 `;
 
+export const Main = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+`;
+
+export const Nav = styled.nav`
+  display: flex;
+  padding-right: 30px;
+`;
+
 export const Texto = styled.p``;
+
+export const TextoHeader = styled.p`
+  font-size: 15px;
+  color: #fff;
+  cursor: pointer;
+`;
