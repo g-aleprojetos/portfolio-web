@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout.styles Container DEVE ser igual ao snapshot QUANDO data-backgroundblack for igual a false 1`] = `
+.c0 {
+  text-align: center;
+  min-height: 100vh;
+  background-color: #202024;
+}
+
+<div>
+  <div
+    class="c0"
+    data-backgroundblack="false"
+  />
+</div>
+`;
+
+exports[`Layout.styles Container DEVE ser igual ao snapshot QUANDO data-backgroundblack for igual a true 1`] = `
+.c0 {
+  text-align: center;
+  min-height: 100vh;
+  background-color: #d3d3d3;
+}
+
+<div>
+  <div
+    class="c0"
+    data-backgroundblack="true"
+  />
+</div>
+`;

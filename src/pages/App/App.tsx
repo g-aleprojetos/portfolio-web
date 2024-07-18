@@ -1,12 +1,16 @@
 import React from 'react';
-import logo from '../assets/images/logo.svg';
+import logo from 'assets/images/logo.svg';
 import {useTranslation} from 'react-i18next';
 import {namespaces} from 'utils/i18n/i18n.constants';
-import '../utils/i18n';
+import 'utils/i18n';
+import {ToggleSwitch} from 'components/toggleSwitch';
 import * as S from './App.styles';
+import {useBackgroundContext} from 'context/background';
 
 export const App = () => {
+  const {themeDark, handleToggle} = useBackgroundContext();
   const {t, i18n} = useTranslation(namespaces.pages.header);
+
   return (
     <S.App>
       <S.Header>
@@ -20,6 +24,7 @@ export const App = () => {
           <S.Item>
             <S.TextoHeader>{t('about')}</S.TextoHeader>
           </S.Item>
+          <ToggleSwitch isOn={themeDark} handleOnclick={handleToggle} />
         </S.Nav>
       </S.Header>
       <S.Main>

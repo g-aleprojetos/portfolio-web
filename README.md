@@ -55,7 +55,7 @@ npm run test
 
 - Para atualizar os snapshots, executar o comando:
 ```shell
-npm run test -u
+npm run test -- -u
 ```
 
 - Executar os testes e emite o reatório coverage:

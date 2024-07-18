@@ -15,8 +15,6 @@ const spin = keyframes`
 
 export const App = styled.div`
   text-align: center;
-  min-height: 100vh;
-  background-color: #282c34;
 `;
 
 export const Botao = styled.button<IApp>`
@@ -37,7 +35,6 @@ export const Header = styled.div`
   align-items: center;
   width: 100%;
   height: 100px;
-  background-color: #202024;
 `;
 
 export const Item = styled.a`

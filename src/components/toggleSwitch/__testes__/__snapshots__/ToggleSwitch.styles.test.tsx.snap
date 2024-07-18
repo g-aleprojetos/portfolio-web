@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToggleSwitch.styles Input DEVE ser igual ao snapshot 1`] = `
+.c0 {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.c0:checked+span {
+  background-color: #15154E;
+}
+
+.c0:checked+span:before {
+  transform: translateX(23.4px);
+  background-color: #ffffff;
+}
+
+.c0:focus+span {
+  box-shadow: 0 0 1px #15154E;
+}
+
+<div>
+  <input
+    class="c0"
+    type="checkbox"
+  />
+</div>
+`;
+
+exports[`ToggleSwitch.styles Span DEVE ser igual ao snapshot 1`] = `
+.c0 {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2196F3;
+  transition: 0.4s;
+  border-radius: 30.6px;
+}
+
+.c0:before {
+  position: absolute;
+  content: '';
+  height: 23.4px;
+  width: 23.4px;
+  left: 3.6px;
+  bottom: 3.6px;
+  background-color: #FFE879;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+<div>
+  <span
+    class="c0"
+  />
+</div>
+`;
+
+exports[`ToggleSwitch.styles Switch DEVE ser igual ao snapshot  1`] = `
+.c0 {
+  position: relative;
+  display: inline-block;
+  width: 54px;
+  height: 30.6px;
+}
+
+<div>
+  <label
+    class="c0"
+  />
+</div>
+`;
