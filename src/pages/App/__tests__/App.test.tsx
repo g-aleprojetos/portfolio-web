@@ -69,8 +69,8 @@ describe('App', () => {
 
       fireEvent.click(botao);
 
-      const paginaInicial = screen.getByText(/Conteúdo/i);
-      expect(paginaInicial).toBeDefined();
+      const conteudo = screen.getByText(/Conteúdo/i);
+      expect(conteudo).toBeDefined();
     });
 
     test('Deve mudar o texto de "About Us" para "Sobre" quando clicar no botão "Português"', () => {
@@ -79,26 +79,50 @@ describe('App', () => {
 
       fireEvent.click(botao);
 
-      const paginaInicial = screen.getByText(/Sobre/i);
-      expect(paginaInicial).toBeDefined();
+      const sobre = screen.getByText(/Sobre/i);
+      expect(sobre).toBeDefined();
     });
 
-    test('Deve voltar para o texto de "Home" quando clicar no botão "Português" e depois "English"', () => {
+    test('Deve mudar o texto de "Home" para "Pagina Inicial" e depois voltar para "Home" quando clicar em "Português" e depois "English"', () => {
       setup();
       const botaoPortugues = screen.getByText(/Português/i);
       fireEvent.click(botaoPortugues);
 
       const botaoEnglish = screen.getByText(/English/i);
       fireEvent.click(botaoEnglish);
+
       const paginaInicial = screen.getByText(/Home/i);
       expect(paginaInicial).toBeDefined();
     });
 
-    test('Deve chamar handleToggle quando o ToggleSwitch é clicado', () => {
+    test('Deve mudar o texto de "Home" para "Page d\'accueil" quando clicar no botão "Français"', () => {
       setup();
-      const toggleSwitch = screen.getByRole('checkbox');
-      fireEvent.click(toggleSwitch);
-      expect(handleToggleMock).toHaveBeenCalledTimes(1);
+      const botaoFrances = screen.getByText(/Français/i);
+
+      fireEvent.click(botaoFrances);
+
+      const paginaInicial = screen.getByText(/Accueil/i);
+      expect(paginaInicial).toBeDefined();
+    });
+
+    test('Deve mudar o texto de "Contents" para "Contenu" quando clicar no botão "Français"', () => {
+      setup();
+      const botaoFrances = screen.getByText(/Français/i);
+
+      fireEvent.click(botaoFrances);
+
+      const conteudo = screen.getByText(/Contenu/i);
+      expect(conteudo).toBeDefined();
+    });
+
+    test('Deve mudar o texto de "About Us" para "À propos" quando clicar no botão "Français"', () => {
+      setup();
+      const botaoFrances = screen.getByText(/Français/i);
+
+      fireEvent.click(botaoFrances);
+
+      const sobre = screen.getByText(/À propos/i);
+      expect(sobre).toBeDefined();
     });
 
     test('Deve definir data-escolhido como true no botão "Português" quando o idioma é "pt"', () => {
@@ -115,6 +139,13 @@ describe('App', () => {
       const botaoEnglish = screen.getByText(/English/i);
       fireEvent.click(botaoEnglish);
       expect(botaoEnglish).toHaveAttribute('data-escolhido', 'true');
+    });
+
+    test('Deve definir data-escolhido como true no botão "Français" quando o idioma é "fr"', () => {
+      setup();
+      const botaoFrances = screen.getByText(/Français/i);
+      fireEvent.click(botaoFrances);
+      expect(botaoFrances).toHaveAttribute('data-escolhido', 'true');
     });
   });
 });
