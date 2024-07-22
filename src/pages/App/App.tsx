@@ -41,6 +41,12 @@ export const App = () => {
             onClick={() => i18n.changeLanguage('en')}>
             English
           </S.Botao>
+          <S.Botao
+            data-escolhido={i18n.resolvedLanguage === 'fr'}
+            type="submit"
+            onClick={() => i18n.changeLanguage('fr')}>
+            Français
+          </S.Botao>
         </S.ContainerBotoes>
         <S.Logo src={logo} alt="logo" />
         <S.Texto>
