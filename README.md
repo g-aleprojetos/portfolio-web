@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[![Coverage Status](https://coveralls.io/repos/github/g-aleprojetos/portifolio-web/badge.svg?branch=main)](https://coveralls.io/github/g-aleprojetos/portifolio-web?branch=main)
+[![Coverage Status](https://coveralls.io/repos/github/g-aleprojetos/portifolio-web/badge.svg)](https://coveralls.io/github/g-aleprojetos/portifolio-web)
  [![MIT Licensed](https://img.shields.io/badge/license-MIT-green.svg)](https://tldrlegal.com/license/mit-license)
  [![style: styled-components](https://img.shields.io/badge/style-%F0%9F%92%85%20styled--components-orange.svg?colorB=daa357&colorA=db748e)](https://github.com/styled-components/styled-components)
 
