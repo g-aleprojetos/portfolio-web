@@ -13,7 +13,7 @@ function getAliases() {
 const config: Config = {
   bail: 1,
   clearMocks: true,
-  collectCoverage: true,
+  collectCoverage: false,
   coverageDirectory: 'coverage',
   coveragePathIgnorePatterns: [
     '/node_modules/',
@@ -22,7 +22,7 @@ const config: Config = {
     '/src/types/',
     '/src/index\\.tsx?$',
   ],
-  coverageReporters: ['html', 'text'],
+  coverageReporters: ['html', 'text', 'lcov'],
   fakeTimers: {
     enableGlobally: true,
   },
