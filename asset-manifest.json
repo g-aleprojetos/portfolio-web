@@ -1,14 +1,16 @@
 {
   "files": {
-    "main.css": "/portifolio-web/static/css/main.90f6920e.css",
-    "main.js": "/portifolio-web/static/js/main.089f7b20.js",
-    "static/media/logo.svg": "/portifolio-web/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.css": "/portifolio-web/static/css/main.8f8c2671.css",
+    "main.js": "/portifolio-web/static/js/main.7d667900.js",
+    "static/media/AvertaStd-Regular.ttf": "/portifolio-web/static/media/AvertaStd-Regular.bff500d7e76a1dab42d1.ttf",
+    "static/media/AvertaStd-Bold.ttf": "/portifolio-web/static/media/AvertaStd-Bold.035345d433cff7977a3f.ttf",
+    "static/media/logo.svg": "/portifolio-web/static/media/logo.71a7375df0de604cd29b105ef76ac071.svg",
     "index.html": "/portifolio-web/index.html",
-    "main.90f6920e.css.map": "/portifolio-web/static/css/main.90f6920e.css.map",
-    "main.089f7b20.js.map": "/portifolio-web/static/js/main.089f7b20.js.map"
+    "main.8f8c2671.css.map": "/portifolio-web/static/css/main.8f8c2671.css.map",
+    "main.7d667900.js.map": "/portifolio-web/static/js/main.7d667900.js.map"
   },
   "entrypoints": [
-    "static/css/main.90f6920e.css",
-    "static/js/main.089f7b20.js"
+    "static/css/main.8f8c2671.css",
+    "static/js/main.7d667900.js"
   ]
 }
