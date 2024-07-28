@@ -5,7 +5,7 @@ import * as S from '../Text';
 describe('Texto', () => {
   describe('Renderização', () => {
     test('DEVE renderizar o texto "Texto de teste"', () => {
-      const result = render(<S.Texto>Texto de teste</S.Texto>).getByText(
+      const result = render(<S.Text>Texto de teste</S.Text>).getByText(
         'Texto de teste',
       );
 
