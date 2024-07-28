@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Image.styles ImageStyled DEVE ser igual ao snapshot 1`] = `
+.c0 {
+  pointer-events: auto;
+  cursor: default;
+  transform: rotate(deg);
+  width: px;
+  height: px;
+}
+
+<div>
+  <img
+    class="c0"
+  />
+</div>
+`;
+
+exports[`Image.styles ImageStyled DEVE ser igual ao snapshot QUANDO a inclinacao 45 1`] = `
+.c0 {
+  pointer-events: auto;
+  cursor: default;
+  transform: rotate(45deg);
+  width: px;
+  height: px;
+}
+
+<div>
+  <img
+    class="c0"
+  />
+</div>
+`;
+
+exports[`Image.styles ImageStyled DEVE ser igual ao snapshot QUANDO o cursor for default 1`] = `
+.c0 {
+  pointer-events: none;
+  cursor: default;
+  transform: rotate(deg);
+  width: px;
+  height: px;
+}
+
+<div>
+  <img
+    class="c0"
+    cursor="default"
+  />
+</div>
+`;
+
+exports[`Image.styles ImageStyled DEVE ser igual ao snapshot QUANDO o cursor for pointer 1`] = `
+.c0 {
+  pointer-events: auto;
+  cursor: pointer;
+  transform: rotate(deg);
+  width: px;
+  height: px;
+}
+
+<div>
+  <img
+    class="c0"
+    cursor="pointer"
+  />
+</div>
+`;
+
+exports[`Image.styles ImageStyled DEVE ser igual ao snapshot QUANDO o spinner for true e a velocidadeSpinner for 2 1`] = `
+.c0 {
+  pointer-events: auto;
+  cursor: default;
+  transform: rotate(deg);
+  width: px;
+  height: px;
+  animation: fvtopB infinite 2s linear;
+}
+
+<div>
+  <img
+    class="c0"
+  />
+</div>
+`;
+
+exports[`Image.styles Svg DEVE ser igual ao snapshot 1`] = `<div />`;
+
+exports[`Image.styles Svg DEVE ser igual ao snapshot QUANDO a inclinacao 45 1`] = `<div />`;
+
+exports[`Image.styles Svg DEVE ser igual ao snapshot QUANDO o cursor for default 1`] = `<div />`;
+
+exports[`Image.styles Svg DEVE ser igual ao snapshot QUANDO o cursor for pointer 1`] = `<div />`;
+
+exports[`Image.styles Svg DEVE ser igual ao snapshot QUANDO o spinner for true e a velocidadeSpinner for 2 1`] = `<div />`;

@@ -22,7 +22,7 @@ interface TextProps {
   $toUpper?: boolean;
 }
 
-export const TextoStyled = styled.p<Props & TextProps>`
+export const TextStyled = styled.p<Props & TextProps>`
   font-size: ${({$tamanho}) => $tamanho ?? texts.tamanho.xxsmall}px;
   font-family: ${({peso}) =>
     peso === 'bold' ? fonts.avertaBold : fonts.avertaRegular};

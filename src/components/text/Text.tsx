@@ -1,10 +1,10 @@
 import React from 'react';
 
-import {TextoStyled, Props} from './Text.styles';
+import {TextStyled, Props} from './Text.styles';
 
-export function Texto(props: Props) {
+export function Text(props: Props) {
   return (
-    <TextoStyled
+    <TextStyled
       $tamanho={props.tamanho}
       $alturaDeLinha={props.alturaDeLinha}
       $marginTop={props.marginTop}
