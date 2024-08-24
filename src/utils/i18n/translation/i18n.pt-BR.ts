@@ -6,4 +6,12 @@ export const pt = {
     contents: 'Conteúdo',
     about: 'Sobre',
   },
+  [namespaces.components.dropdown]: {
+    portuguese: 'Português',
+    altFlagBrazil: 'Bandeira do Brasil',
+    english: 'Inglês',
+    altFlagEUA: 'Bandeira dos EUA',
+    french: 'Francês',
+    altFragFrance: 'Bandeira da França',
+  },
 };

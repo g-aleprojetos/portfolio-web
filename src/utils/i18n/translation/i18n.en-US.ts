@@ -6,4 +6,12 @@ export const en = {
     contents: 'Contents',
     about: 'About us',
   },
+  [namespaces.components.dropdown]: {
+    portuguese: 'Portuguese',
+    altFlagBrazil: "Brazil's flag",
+    english: 'English',
+    altFlagEUA: 'USA flag',
+    french: 'French',
+    altFragFrance: 'France flag',
+  },
 };
