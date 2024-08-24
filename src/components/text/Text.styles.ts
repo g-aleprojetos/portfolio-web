@@ -3,9 +3,9 @@ import {colors} from 'resources/colors';
 import fonts from 'resources/fonts';
 import texts from 'resources/texts';
 
-export type Props = {
+export type TextProps = {
   id?: string;
-  cor?: string;
+  color?: string;
   tamanho?: 12 | 14 | 16 | 18 | 24;
   alturaDeLinha?: 18 | 22 | 24 | 26 | 34;
   marginTop?: number;
@@ -15,7 +15,7 @@ export type Props = {
   cursor?: 'default' | 'pointer' | 'text';
 };
 
-interface TextProps {
+interface Props {
   $tamanho?: number;
   $alturaDeLinha?: number;
   $marginTop?: number;
@@ -26,7 +26,7 @@ export const TextStyled = styled.p<Props & TextProps>`
   font-size: ${({$tamanho}) => $tamanho ?? texts.tamanho.xxsmall}px;
   font-family: ${({peso}) =>
     peso === 'bold' ? fonts.avertaBold : fonts.avertaRegular};
-  color: ${({cor}) => cor ?? colors.white};
+  color: ${({color}) => color ?? colors.background01};
   margin-top: ${({$marginTop}) => $marginTop ?? 0}px;
   text-transform: ${({$toUpper}) => ($toUpper ? 'uppercase' : 'none')};
   cursor: ${({cursor}) => cursor ?? 'text'};

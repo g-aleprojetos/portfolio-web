@@ -9,5 +9,5 @@ export const Container = styled.div<ExtraProps>`
   text-align: center;
   min-height: 100vh;
   background-color: ${props =>
-    props['data-backgroundblack'] ? colors.lightgray : colors.darkgray};
+    props['data-backgroundblack'] ? colors.background02 : colors.darkgray};
 `;

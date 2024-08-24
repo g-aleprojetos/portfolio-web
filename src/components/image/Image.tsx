@@ -31,6 +31,7 @@ export const Image = ({
         <Svg
           data-testid={testId ? `${testId}-svg` : 'svg'}
           src={src}
+          title={alt}
           cor={cor}
           width={largura}
           height={altura}

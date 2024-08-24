@@ -19,7 +19,7 @@ exports[`Layout.styles Container DEVE ser igual ao snapshot QUANDO data-backgrou
 .c0 {
   text-align: center;
   min-height: 100vh;
-  background-color: #d3d3d3;
+  background-color: #F7F5F2;
 }
 
 <div>

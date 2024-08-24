@@ -13,7 +13,7 @@ describe('Texto.styles', () => {
 
   test(`DEVE ter a cor igual a "##000000" QUANDO a propriedade cor informada for ${colors.black} `, () => {
     const {container} = render(
-      <TextStyled cor={colors.black}>Teste</TextStyled>,
+      <TextStyled color={colors.black}>Teste</TextStyled>,
     );
     expect(container.firstChild).toHaveStyleRule('color', '#000000');
   });
