@@ -1,8 +1,8 @@
 import React from 'react';
 
-import {TextStyled, Props} from './Text.styles';
+import {TextStyled, TextProps} from './Text.styles';
 
-export function Text(props: Props) {
+export function Text(props: TextProps) {
   return (
     <TextStyled
       $tamanho={props.tamanho}

@@ -1,0 +1,154 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Image.styles Caret DEVE ser igual ao snapshot 1`] = `
+.c0 {
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 8px solid #ffffff;
+  transition: transform 0.3s;
+  transform: rotate(0deg);
+}
+
+<div>
+  <div
+    class="c0"
+  />
+</div>
+`;
+
+exports[`Image.styles ContainerOption DEVE ser igual ao snapshot 1`] = `
+.c0 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+<div>
+  <div
+    class="c0"
+  />
+</div>
+`;
+
+exports[`Image.styles DropdownContainer DEVE ser igual ao snapshot 1`] = `
+.c0 {
+  min-width: 150px;
+  position: relative;
+  margin: 8px;
+}
+
+<div>
+  <div
+    class="c0"
+  />
+</div>
+`;
+
+exports[`Image.styles Flag DEVE ser igual ao snapshot 1`] = `<div />`;
+
+exports[`Image.styles Menu DEVE ser igual ao snapshot 1`] = `
+.c0 {
+  position: absolute;
+  list-style: none;
+  background: #323741;
+  border: 1px solid #363a43;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  color: #9fa5b5;
+  top: 64px;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  opacity: 1;
+  transition: opacity 0.2s;
+  display: block;
+  z-index: 1;
+}
+
+<div>
+  <ul
+    class="c0"
+  />
+</div>
+`;
+
+exports[`Image.styles MenuItem DEVE ser igual ao snapshot 1`] = `
+.c0 {
+  display: flex;
+  padding: 12px 8px;
+  margin: 4px;
+  border-radius: 8px;
+  cursor: pointer;
+  background: transparent;
+}
+
+.c0:hover {
+  background: #2a2d35;
+}
+
+<div>
+  <li
+    class="c0"
+  />
+</div>
+`;
+
+exports[`Image.styles Select DEVE ser igual ao snapshot 1`] = `
+.c0 {
+  background: #23242a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #2a2f3b;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background 0.3s,box-shadow 0.3s;
+  box-shadow: none;
+}
+
+.c0:hover {
+  background: #323741;
+}
+
+<div>
+  <div
+    class="c0"
+  />
+</div>
+`;
+
+exports[`Image.styles Selected DEVE ser igual ao snapshot 1`] = `
+.c0 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+<div>
+  <span
+    class="c0"
+  />
+</div>
+`;
+
+exports[`Image.styles Texto DEVE ser igual ao snapshot 1`] = `
+.c0 {
+  font-size: 12px;
+  font-family: AvertaStd-Regular;
+  color: #000000;
+  margin-top: 0px;
+  text-transform: none;
+  cursor: pointer;
+}
+
+<div>
+  <p
+    class="c0 "
+    color="#000000"
+    cursor="pointer"
+  />
+</div>
+`;
