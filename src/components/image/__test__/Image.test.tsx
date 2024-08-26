@@ -3,6 +3,7 @@ import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import {Image} from '../Image';
 import 'jest-styled-components';
+import sizes from 'resources/sizes';
 
 interface InlineSVGProps {
   [key: string]: unknown;
@@ -76,11 +77,18 @@ describe('Image', () => {
       expect(imgElement).toBeInTheDocument();
     });
 
-    test('deve aplicar largura e altura corretamente na imagem', () => {
+    test('deve aplicar largura e altura corretamente na imagem passado como número', () => {
       render(<Image src="icon.png" largura={64} altura={64} />);
       const imgElement = screen.getByTestId('img');
-      expect(imgElement).toHaveAttribute('width', '64');
-      expect(imgElement).toHaveAttribute('height', '64');
+      expect(imgElement).toHaveAttribute('width', '64px');
+      expect(imgElement).toHaveAttribute('height', '64px');
+    });
+
+    test('deve aplicar largura e altura corretamente na imagem passado como variavel', () => {
+      render(<Image src="icon.png" largura={sizes.px55} altura={sizes.px55} />);
+      const imgElement = screen.getByTestId('img');
+      expect(imgElement).toHaveAttribute('width', '3.438rem');
+      expect(imgElement).toHaveAttribute('height', '3.438rem');
     });
 
     test('deve aplicar spinner corretamente na imagem', () => {
