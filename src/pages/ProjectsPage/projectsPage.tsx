@@ -1,13 +1,13 @@
 import React from 'react';
 import manutencao from 'assets/images/manutencao.svg';
 
-import * as S from './projects.styles';
+import * as S from './projectsPage.styles';
 
-export const Projects = () => {
+export const ProjectsPage = () => {
   return (
-    <S.Container data-testid="test-projects">
+    <S.Container data-testid="test-projects-page">
       <S.Imagem
-        data-testid="test-image-projects"
+        data-testid="test-image-projects-page"
         alt="manutencao"
         src={manutencao}
       />
