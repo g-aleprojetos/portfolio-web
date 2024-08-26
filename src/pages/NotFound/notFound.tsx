@@ -1,13 +1,13 @@
 import React from 'react';
 import manutencao from 'assets/images/manutencao.svg';
 
-import * as S from './about.styles';
+import * as S from './notFound.styles';
 
-export const About = () => {
+export const NotFound = () => {
   return (
-    <S.Container data-testid="test-about">
+    <S.Container data-testid="test-notFound">
       <S.Imagem
-        data-testid="test-image-about"
+        data-testid="test-image-notFound"
         alt="manutencao"
         src={manutencao}
       />
