@@ -10,23 +10,13 @@ describe('App.styles', () => {
     expect(container).toMatchSnapshot();
   });
 
-  test('Botao DEVE ser igual ao snapshot', () => {
-    const {container} = render(<S.Botao data-escolhido={true} />);
-    expect(container).toMatchSnapshot();
-  });
-
-  test('ContainerBotoes DEVE ser igual ao snapshot', () => {
-    const {container} = render(<S.ContainerBotoes />);
-    expect(container).toMatchSnapshot();
-  });
-
   test('Header DEVE ser igual ao snapshot', () => {
     const {container} = render(<S.Header />);
     expect(container).toMatchSnapshot();
   });
 
   test('Item DEVE ser igual ao snapshot', () => {
-    const {container} = render(<S.Item />);
+    const {container} = render(<S.ItemContent />);
     expect(container).toMatchSnapshot();
   });
 

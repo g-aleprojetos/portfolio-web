@@ -5,8 +5,6 @@ exports[`Image.styles ImageStyled DEVE ser igual ao snapshot 1`] = `
   pointer-events: auto;
   cursor: default;
   transform: rotate(deg);
-  width: px;
-  height: px;
 }
 
 <div>
@@ -21,8 +19,6 @@ exports[`Image.styles ImageStyled DEVE ser igual ao snapshot QUANDO a inclinacao
   pointer-events: auto;
   cursor: default;
   transform: rotate(45deg);
-  width: px;
-  height: px;
 }
 
 <div>
@@ -37,8 +33,6 @@ exports[`Image.styles ImageStyled DEVE ser igual ao snapshot QUANDO o cursor for
   pointer-events: none;
   cursor: default;
   transform: rotate(deg);
-  width: px;
-  height: px;
 }
 
 <div>
@@ -54,8 +48,6 @@ exports[`Image.styles ImageStyled DEVE ser igual ao snapshot QUANDO o cursor for
   pointer-events: auto;
   cursor: pointer;
   transform: rotate(deg);
-  width: px;
-  height: px;
 }
 
 <div>
@@ -71,8 +63,6 @@ exports[`Image.styles ImageStyled DEVE ser igual ao snapshot QUANDO o spinner fo
   pointer-events: auto;
   cursor: default;
   transform: rotate(deg);
-  width: px;
-  height: px;
   animation: fvtopB infinite 2s linear;
 }
 

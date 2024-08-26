@@ -25,6 +25,14 @@ export const Image = ({
 }: Readonly<IconeProps>) => {
   const isSvg = src.endsWith('.svg');
 
+  if (typeof largura === 'number') {
+    largura = `${largura}px`;
+  }
+
+  if (typeof altura === 'number') {
+    altura = `${altura}px`;
+  }
+
   return (
     <>
       {isSvg ? (
