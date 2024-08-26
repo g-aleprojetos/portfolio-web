@@ -12,35 +12,6 @@ exports[`App.styles App DEVE ser igual ao snapshot 1`] = `
 </div>
 `;
 
-exports[`App.styles Botao DEVE ser igual ao snapshot 1`] = `
-.c0 {
-  width: 100px;
-  height: 30px;
-  margin: 10px;
-  background-color: #aff;
-}
-
-<div>
-  <button
-    class="c0"
-    data-escolhido="true"
-  />
-</div>
-`;
-
-exports[`App.styles ContainerBotoes DEVE ser igual ao snapshot 1`] = `
-.c0 {
-  margin-top: 20px;
-  margin-bottom: 50px;
-}
-
-<div>
-  <div
-    class="c0"
-  />
-</div>
-`;
-
 exports[`App.styles Header DEVE ser igual ao snapshot 1`] = `
 .c0 {
   display: flex;
@@ -121,6 +92,7 @@ exports[`App.styles Nav DEVE ser igual ao snapshot 1`] = `
 .c0 {
   display: flex;
   padding-right: 30px;
+  gap: 10px;
 }
 
 <div>

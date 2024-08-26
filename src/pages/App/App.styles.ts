@@ -1,9 +1,5 @@
 import styled, {keyframes} from 'styled-components';
 
-interface IApp {
-  'data-escolhido': boolean;
-}
-
 const spin = keyframes`
   from {
     transform: rotate(0deg);
@@ -17,18 +13,6 @@ export const App = styled.div`
   text-align: center;
 `;
 
-export const Botao = styled.button<IApp>`
-  width: 100px;
-  height: 30px;
-  margin: 10px;
-  background-color: ${props => (props['data-escolhido'] ? '#aff' : '#aaa')};
-`;
-
-export const ContainerBotoes = styled.div`
-  margin-top: 20px;
-  margin-bottom: 50px;
-`;
-
 export const Header = styled.div`
   display: flex;
   justify-content: flex-end;
@@ -37,7 +21,12 @@ export const Header = styled.div`
   height: 100px;
 `;
 
-export const Item = styled.a`
+export const Item = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export const ItemContent = styled.a`
   margin: 10px;
 `;
 
@@ -66,6 +55,7 @@ export const Main = styled.div`
 export const Nav = styled.nav`
   display: flex;
   padding-right: 30px;
+  gap: 10px;
 `;
 
 export const Texto = styled.p``;

@@ -4,8 +4,8 @@ import InlineSVG from 'react-inlinesvg';
 export interface Props {
   alt?: string;
   cor?: string;
-  altura?: number;
-  largura?: number;
+  altura?: number | string;
+  largura?: number | string;
   cursor?: 'default' | 'pointer';
   inclinacao?: number;
   spinner?: boolean;
@@ -35,8 +35,8 @@ export const ImageStyled = styled.img<Props & ExtraProps>`
   pointer-events: ${({cursor}) => (cursor === 'default' ? 'none' : 'auto')};
   cursor: ${({cursor}) => cursor ?? 'default'};
   transform: rotate(${({$inclinacao}) => $inclinacao}deg);
-  width: ${({largura}) => largura}px;
-  height: ${({altura}) => altura}px;
+  width: ${({largura}) => largura};
+  height: ${({altura}) => altura};
   ${({$spinner, $velocidadeSpinner}) =>
     $spinner && $velocidadeSpinner && spinnerAnimation($velocidadeSpinner)}
 `;
