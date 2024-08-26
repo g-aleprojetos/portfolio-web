@@ -1,13 +1,13 @@
 import React from 'react';
 import manutencao from 'assets/images/manutencao.svg';
 
-import * as S from './home.styles';
+import * as S from './homePage.styles';
 
-export const Home = () => {
+export const HomePage = () => {
   return (
-    <S.Container data-testid="test-home">
+    <S.Container data-testid="test-home-page">
       <S.Imagem
-        data-testid="test-image-home"
+        data-testid="test-image-home-page"
         alt="manutencao"
         src={manutencao}
       />
