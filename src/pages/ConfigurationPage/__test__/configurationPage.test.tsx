@@ -1,22 +1,22 @@
 import React from 'react';
 import {render, RenderResult} from '@testing-library/react';
 import '@testing-library/jest-dom';
-import {NotFound} from '../notFound';
+import {ConfigurationPage} from '../configurationPage';
 
-describe('NotFound', () => {
+describe('ConfigurationPage', () => {
   let component: RenderResult;
 
   beforeEach(() => {
-    component = render(<NotFound />);
+    component = render(<ConfigurationPage />);
   });
 
   describe('Renderização', () => {
-    test(`DEVE renderizar a pagina "NotFound"`, () => {
-      const notFound = component.getByTestId('test-notFound');
+    test(`DEVE renderizar a pagina "ConfigurationPage"`, () => {
+      const notFound = component.getByTestId('test-configuration-page');
       expect(notFound).toBeDefined();
     });
     test(`DEVE renderizar a "Imagem" na pagina`, async () => {
-      const imagem = component.getByTestId('test-image-notFound');
+      const imagem = component.getByTestId('test-image-configuration-page');
       expect(imagem).toBeDefined();
     });
   });

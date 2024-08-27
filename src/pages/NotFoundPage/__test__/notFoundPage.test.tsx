@@ -1,22 +1,22 @@
 import React from 'react';
 import {render, RenderResult} from '@testing-library/react';
 import '@testing-library/jest-dom';
-import {AboutPage} from '../aboutPage';
+import {NotFoundPage} from '../notFoundPage';
 
-describe('AboutPage', () => {
+describe('NotFoundPage', () => {
   let component: RenderResult;
 
   beforeEach(() => {
-    component = render(<AboutPage />);
+    component = render(<NotFoundPage />);
   });
 
   describe('Renderização', () => {
-    test(`DEVE renderizar a pagina "AboutPage"`, () => {
-      const tree = component.getByTestId('test-about-page');
+    test(`DEVE renderizar a pagina "NotFoundPage"`, () => {
+      const tree = component.getByTestId('test-notFound-page');
       expect(tree).toBeDefined();
     });
     test(`DEVE renderizar a "Imagem" na pagina`, async () => {
-      const imagem = component.getByTestId('test-image-about-page');
+      const imagem = component.getByTestId('test-image-notFound-page');
       expect(imagem).toBeDefined();
     });
   });
