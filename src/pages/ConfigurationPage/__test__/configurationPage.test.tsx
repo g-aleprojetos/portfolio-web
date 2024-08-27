@@ -12,8 +12,8 @@ describe('ConfigurationPage', () => {
 
   describe('Renderização', () => {
     test(`DEVE renderizar a pagina "ConfigurationPage"`, () => {
-      const notFound = component.getByTestId('test-configuration-page');
-      expect(notFound).toBeDefined();
+      const tree = component.getByTestId('test-configuration-page');
+      expect(tree).toBeDefined();
     });
     test(`DEVE renderizar a "Imagem" na pagina`, async () => {
       const imagem = component.getByTestId('test-image-configuration-page');
