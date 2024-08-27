@@ -1,13 +1,13 @@
 import React from 'react';
 import manutencao from 'assets/images/manutencao.svg';
 
-import * as S from './notFound.styles';
+import * as S from './notFoundPage.styles';
 
-export const NotFound = () => {
+export const NotFoundPage = () => {
   return (
-    <S.Container data-testid="test-notFound">
+    <S.Container data-testid="test-notFound-page">
       <S.Imagem
-        data-testid="test-image-notFound"
+        data-testid="test-image-notFound-page"
         alt="manutencao"
         src={manutencao}
       />

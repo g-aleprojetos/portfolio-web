@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`NotFound.styles Container DEVE ser igual ao snapshot 1`] = `
+exports[`NotFoundPage.styles Container DEVE ser igual ao snapshot 1`] = `
 .c0 {
   display: flex;
   justify-content: center;
@@ -16,7 +16,7 @@ exports[`NotFound.styles Container DEVE ser igual ao snapshot 1`] = `
 </div>
 `;
 
-exports[`NotFound.styles Image DEVE ser igual ao snapshot 1`] = `
+exports[`NotFoundPage.styles Image DEVE ser igual ao snapshot 1`] = `
 .c0 {
   pointer-events: auto;
   cursor: default;
