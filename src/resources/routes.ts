@@ -1,7 +1,7 @@
 export default {
-  Home: 'portifolio-web',
-  Skills: 'portifolio-web/skills',
-  Projects: 'portifolio-web/projects',
-  About: 'portifolio-web/about',
+  Home: '/',
+  Skills: '/skills',
+  Projects: '/projects',
+  About: '/about',
   NotFound: '*',
 };
