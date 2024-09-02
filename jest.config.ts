@@ -34,7 +34,7 @@ const config: Config = {
       '<rootDir>/__mocks__/fileMock.js',
     ...getAliases(),
   },
-  setupFilesAfterEnv: ['@testing-library/react'],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts', '@testing-library/react'],
   testEnvironment: 'jsdom',
   testPathIgnorePatterns: ['/node_modules/'],
   transform: {
