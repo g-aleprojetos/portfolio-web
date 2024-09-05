@@ -37,6 +37,11 @@ export const WebRoutes = () => {
       ],
     },
   ];
+  const basename = '/portifolio-web';
 
-  return <RouterProvider router={createBrowserRouter(routeConfig)} />;
+  const router = createBrowserRouter(routeConfig, {
+    basename,
+  });
+
+  return <RouterProvider router={router} />;
 };
