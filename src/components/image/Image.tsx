@@ -1,5 +1,5 @@
 import React from 'react';
-import {ImageStyled, Svg, Props} from './Image.styles';
+import {ContainerImage, ImageStyled, Svg, Props} from './Image.styles';
 
 interface IconeProps extends Props {
   testId?: string;
@@ -34,15 +34,18 @@ export const Image = ({
   }
 
   return (
-    <>
+    <ContainerImage
+      data-testid="container-image"
+      $largura={largura}
+      $altura={altura}
+      {...props} // Aqui, props não conterá mais testId
+    >
       {isSvg ? (
         <Svg
           data-testid={testId ? `${testId}-svg` : 'svg'}
           src={src}
           title={alt}
           cor={cor}
-          width={largura}
-          height={altura}
           cursor={cursor}
           $inclinacao={inclinacao}
           $spinner={spinner}
@@ -53,15 +56,12 @@ export const Image = ({
           data-testid={testId ? `${testId}-img` : 'img'}
           src={src}
           alt={alt}
-          width={largura}
-          height={altura}
           cursor={cursor}
           $inclinacao={inclinacao}
           $spinner={spinner}
           $velocidadeSpinner={velocidadeSpinner}
-          {...props}
         />
       )}
-    </>
+    </ContainerImage>
   );
 };

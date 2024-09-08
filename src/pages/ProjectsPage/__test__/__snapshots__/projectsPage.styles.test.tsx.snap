@@ -2,11 +2,12 @@
 
 exports[`ProjectsPage.styles Container DEVE ser igual ao snapshot 1`] = `
 .c0 {
+  flex-grow: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%;
+  height: calc(100vh - 116px);
 }
 
 <div>
@@ -18,18 +19,28 @@ exports[`ProjectsPage.styles Container DEVE ser igual ao snapshot 1`] = `
 
 exports[`ProjectsPage.styles Image DEVE ser igual ao snapshot 1`] = `
 .c0 {
+  display: flex;
+  width: 377px;
+  height: 377px;
+  box-sizing: border-box;
+}
+
+.c1 {
   pointer-events: auto;
   cursor: default;
   transform: rotate(0deg);
 }
 
 <div>
-  <img
+  <div
     class="c0 "
-    data-testid="img"
-    height="23.563rem"
-    src="test-file-stub"
-    width="23.563rem"
-  />
+    data-testid="container-image"
+  >
+    <img
+      class="c1"
+      data-testid="img"
+      src="test-file-stub"
+    />
+  </div>
 </div>
 `;

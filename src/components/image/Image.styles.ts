@@ -16,6 +16,8 @@ interface ExtraProps {
   $spinner?: boolean;
   $velocidadeSpinner?: number;
   $inclinacao?: number;
+  $altura?: string;
+  $largura?: string;
 }
 
 const spin = keyframes`
@@ -31,21 +33,24 @@ const spinnerAnimation = (velocidade: number) => css`
   animation: ${spin} infinite ${velocidade}s linear;
 `;
 
+export const ContainerImage = styled.div<ExtraProps>`
+  display: flex;
+  width: ${({$largura}) => $largura};
+  height: ${({$altura}) => $altura};
+  box-sizing: border-box;
+`;
+
 export const ImageStyled = styled.img<Props & ExtraProps>`
   pointer-events: ${({cursor}) => (cursor === 'default' ? 'none' : 'auto')};
   cursor: ${({cursor}) => cursor ?? 'default'};
   transform: rotate(${({$inclinacao}) => $inclinacao}deg);
-  width: ${({largura}) => largura};
-  height: ${({altura}) => altura};
   ${({$spinner, $velocidadeSpinner}) =>
     $spinner && $velocidadeSpinner && spinnerAnimation($velocidadeSpinner)}
 `;
 
 export const Svg = styled(InlineSVG).attrs<Props & ExtraProps>(
-  ({cor, altura, largura, $inclinacao}) => ({
+  ({cor, $inclinacao}) => ({
     style: {
-      width: largura,
-      height: altura,
       fill: cor,
       transform: `rotate(${$inclinacao}deg)`,
     },
