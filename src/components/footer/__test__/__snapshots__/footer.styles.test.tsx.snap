@@ -1,0 +1,496 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer.styles Container DEVE ser igual ao snapshot QUANDO $backgroundblack for igual a false 1`] = `
+.c0 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background-color: #ffffff;
+  z-index: 10;
+}
+
+<div>
+  <div
+    class="c0"
+  />
+</div>
+`;
+
+exports[`Footer.styles Container DEVE ser igual ao snapshot QUANDO $backgroundblack for igual a true 1`] = `
+.c0 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background-color: #23242a;
+  z-index: 10;
+}
+
+<div>
+  <div
+    class="c0"
+  />
+</div>
+`;
+
+exports[`Footer.styles ContainerItem DEVE ser igual ao snapshot 1`] = `
+.c0 {
+  display: flex;
+  position: relative;
+  width: 350px;
+}
+
+<div>
+  <ul
+    class="c0"
+  />
+</div>
+`;
+
+exports[`Footer.styles Imagem DEVE ser igual ao snapshot com $backgroundblack true 1`] = `
+.c0 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  box-sizing: border-box;
+}
+
+.c2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: auto;
+  cursor: default;
+}
+
+.c1 {
+  transition: 0.3s;
+}
+
+<div>
+  <div
+    class="c0 c1"
+    data-testid="container-image"
+  >
+    <svg
+      class="c2"
+      color="#ffffff"
+      data-testid="svg"
+      src="icon.svg"
+      style="fill: #ffffff; transform: rotate(0deg);"
+    />
+  </div>
+</div>
+`;
+
+exports[`Footer.styles Imagem DEVE ser igual ao snapshot com $isActivated true 1`] = `
+.c0 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  box-sizing: border-box;
+}
+
+.c2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: auto;
+  cursor: default;
+}
+
+.c1 {
+  transition: 0.3s;
+}
+
+<div>
+  <div
+    class="c0 c1"
+    data-testid="container-image"
+  >
+    <svg
+      class="c2"
+      color="#23242a"
+      data-testid="svg"
+      src="icon.svg"
+      style="fill: #23242a; transform: rotate(0deg);"
+    />
+  </div>
+</div>
+`;
+
+exports[`Footer.styles Indicator DEVE ser igual ao snapshot com $position -1 1`] = `
+.c0 {
+  display: none;
+  position: absolute;
+  top: -60%;
+  left: 2%;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #29fd53;
+  border: 6px solid #23242a;
+  box-sizing: border-box;
+  transition: transform 0.5s;
+}
+
+.c0::before {
+  content: '';
+  position: absolute;
+  top: 62%;
+  left: -18px;
+  width: 18px;
+  height: 18px;
+  background: transparent;
+  border-top-right-radius: 20px;
+  box-shadow: 0px -10px 0 0 #23242a;
+}
+
+.c0::after {
+  content: '';
+  position: absolute;
+  top: 62%;
+  right: -18px;
+  width: 18px;
+  height: 18px;
+  background: transparent;
+  border-top-left-radius: 20px;
+  box-shadow: 0px -10px 0 0 #23242a;
+}
+
+<div>
+  <div
+    class="c0"
+  />
+</div>
+`;
+
+exports[`Footer.styles Indicator DEVE ser igual ao snapshot com $position 0 1`] = `
+.c0 {
+  display: block;
+  position: absolute;
+  top: -60%;
+  left: 2%;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #29fd53;
+  border: 6px solid #23242a;
+  box-sizing: border-box;
+  transition: transform 0.5s;
+  transform: translateX(1px);
+}
+
+.c0::before {
+  content: '';
+  position: absolute;
+  top: 62%;
+  left: -18px;
+  width: 18px;
+  height: 18px;
+  background: transparent;
+  border-top-right-radius: 20px;
+  box-shadow: 0px -10px 0 0 #23242a;
+}
+
+.c0::after {
+  content: '';
+  position: absolute;
+  top: 62%;
+  right: -18px;
+  width: 18px;
+  height: 18px;
+  background: transparent;
+  border-top-left-radius: 20px;
+  box-shadow: 0px -10px 0 0 #23242a;
+}
+
+<div>
+  <div
+    class="c0"
+  />
+</div>
+`;
+
+exports[`Footer.styles Indicator DEVE ser igual ao snapshot com $position 1 1`] = `
+.c0 {
+  display: block;
+  position: absolute;
+  top: -60%;
+  left: 2%;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #29fd53;
+  border: 6px solid #23242a;
+  box-sizing: border-box;
+  transition: transform 0.5s;
+  transform: translateX(88px);
+}
+
+.c0::before {
+  content: '';
+  position: absolute;
+  top: 62%;
+  left: -18px;
+  width: 18px;
+  height: 18px;
+  background: transparent;
+  border-top-right-radius: 20px;
+  box-shadow: 0px -10px 0 0 #23242a;
+}
+
+.c0::after {
+  content: '';
+  position: absolute;
+  top: 62%;
+  right: -18px;
+  width: 18px;
+  height: 18px;
+  background: transparent;
+  border-top-left-radius: 20px;
+  box-shadow: 0px -10px 0 0 #23242a;
+}
+
+<div>
+  <div
+    class="c0"
+  />
+</div>
+`;
+
+exports[`Footer.styles Indicator DEVE ser igual ao snapshot com $position 2 1`] = `
+.c0 {
+  display: block;
+  position: absolute;
+  top: -60%;
+  left: 2%;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #29fd53;
+  border: 6px solid #23242a;
+  box-sizing: border-box;
+  transition: transform 0.5s;
+  transform: translateX(176px);
+}
+
+.c0::before {
+  content: '';
+  position: absolute;
+  top: 62%;
+  left: -18px;
+  width: 18px;
+  height: 18px;
+  background: transparent;
+  border-top-right-radius: 20px;
+  box-shadow: 0px -10px 0 0 #23242a;
+}
+
+.c0::after {
+  content: '';
+  position: absolute;
+  top: 62%;
+  right: -18px;
+  width: 18px;
+  height: 18px;
+  background: transparent;
+  border-top-left-radius: 20px;
+  box-shadow: 0px -10px 0 0 #23242a;
+}
+
+<div>
+  <div
+    class="c0"
+  />
+</div>
+`;
+
+exports[`Footer.styles Indicator DEVE ser igual ao snapshot com $position 3 1`] = `
+.c0 {
+  display: block;
+  position: absolute;
+  top: -60%;
+  left: 2%;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #29fd53;
+  border: 6px solid #23242a;
+  box-sizing: border-box;
+  transition: transform 0.5s;
+  transform: translateX(264px);
+}
+
+.c0::before {
+  content: '';
+  position: absolute;
+  top: 62%;
+  left: -18px;
+  width: 18px;
+  height: 18px;
+  background: transparent;
+  border-top-right-radius: 20px;
+  box-shadow: 0px -10px 0 0 #23242a;
+}
+
+.c0::after {
+  content: '';
+  position: absolute;
+  top: 62%;
+  right: -18px;
+  width: 18px;
+  height: 18px;
+  background: transparent;
+  border-top-left-radius: 20px;
+  box-shadow: 0px -10px 0 0 #23242a;
+}
+
+<div>
+  <div
+    class="c0"
+  />
+</div>
+`;
+
+exports[`Footer.styles Item DEVE ser igual ao snapshot com $isActivated true 1`] = `
+.c0 {
+  position: relative;
+  list-style: none;
+  width: 90px;
+  height: 70px;
+  z-index: 1;
+  transform: translateY(-40px);
+  transition: 0.5s;
+}
+
+<div>
+  <li
+    class="c0"
+  />
+</div>
+`;
+
+exports[`Footer.styles Navegacao DEVE ser igual ao snapshot 1`] = `
+.c0 {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+<div>
+  <a
+    class="c0"
+    href="/"
+  />
+</div>
+`;
+
+exports[`Footer.styles TextNavegation DEVE ser igual ao snapshot QUANDO $backgroundblack for igual a false 1`] = `
+.c0 {
+  font-size: 12px;
+  font-family: AvertaStd-Regular;
+  color: #23242a;
+  margin-top: 0px;
+  text-transform: none;
+  cursor: text;
+}
+
+.c1 {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+<div>
+  <p
+    class="c0 c1"
+    color="#23242a"
+  />
+</div>
+`;
+
+exports[`Footer.styles TextNavegation DEVE ser igual ao snapshot QUANDO $backgroundblack for igual a true 1`] = `
+.c0 {
+  font-size: 12px;
+  font-family: AvertaStd-Regular;
+  color: #ffffff;
+  margin-top: 0px;
+  text-transform: none;
+  cursor: text;
+}
+
+.c1 {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+<div>
+  <p
+    class="c0 c1"
+    color="#ffffff"
+  />
+</div>
+`;
+
+exports[`Footer.styles TextNavegation DEVE ser igual ao snapshot com $isActivated true 1`] = `
+.c0 {
+  font-size: 12px;
+  font-family: AvertaStd-Regular;
+  color: #23242a;
+  margin-top: 0px;
+  text-transform: none;
+  cursor: text;
+}
+
+.c1 {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  opacity: 1;
+  transform: translateY(48px);
+}
+
+<div>
+  <p
+    class="c0 c1"
+    color="#23242a"
+  />
+</div>
+`;

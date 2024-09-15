@@ -14,4 +14,9 @@ describe('Layout.styles', () => {
     const {container} = render(<S.Container $backgroundblack={false} />);
     expect(container).toMatchSnapshot();
   });
+
+  test('Content DEVE ser igual ao snapshot', () => {
+    const {container} = render(<S.Content />);
+    expect(container).toMatchSnapshot();
+  });
 });

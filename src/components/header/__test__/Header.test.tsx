@@ -12,9 +12,6 @@ jest.mock('react-router-dom', () => {
   const actual = jest.requireActual('react-router-dom');
   return {
     ...actual,
-    Outlet: ({children}: {children: React.ReactNode}) => {
-      return <div>{children}</div>;
-    },
     Link: ({to, children}: {to: string; children: React.ReactNode}) => {
       return <a href={to}>{children}</a>;
     },
@@ -46,17 +43,17 @@ describe('Header', () => {
       expect(linkElement).toBeInTheDocument();
     });
 
-    test('Deve renderizar o texto "Pagina Inicial".', () => {
+    test('Deve renderizar o texto "Home".', () => {
       const linkElement = component.getByText(/Home/i);
       expect(linkElement).toBeInTheDocument();
     });
 
-    test('Deve renderizar o texto "Conteudo".', () => {
-      const linkElement = component.getByText(/Contents/i);
+    test('Deve renderizar o texto "Projets".', () => {
+      const linkElement = component.getByText(/Projects/i);
       expect(linkElement).toBeInTheDocument();
     });
 
-    test('Deve renderizar o texto "sobre".', () => {
+    test('Deve renderizar o texto "About Us".', () => {
       const linkElement = component.getByText(/About Us/i);
       expect(linkElement).toBeInTheDocument();
     });
@@ -67,7 +64,7 @@ describe('Header', () => {
     });
 
     test('Deve ter o link correto para Projects', () => {
-      const projectsLink = component.getByText(/Contents/i).closest('a');
+      const projectsLink = component.getByText(/Projects/i).closest('a');
       expect(projectsLink).toHaveAttribute('href', routes.Projects);
     });
 
@@ -131,7 +128,7 @@ describe('Header', () => {
     test('Deve aplicar estilo ativado ao link "Projects" quando o pathname for "/projects"', () => {
       useLocationMock.mockReturnValue({pathname: routes.Projects});
       component.rerender(<Header />);
-      const projectsText = component.getByText(/contents/i);
+      const projectsText = component.getByText(/projects/i);
       expect(projectsText).toHaveStyle(
         `color: ${convertHexToRgb(colors.background01)}`,
       );
@@ -168,12 +165,13 @@ describe('Header', () => {
       const aboutItemContent = component.getByText(/about/i).closest('div');
       expect(aboutItemContent).toBeInTheDocument();
 
-      if (aboutItemContent) {
-        const borderBottomColor =
-          window.getComputedStyle(aboutItemContent).borderBottomColor;
-        const expectedColor = colors.background01;
-        expect(borderBottomColor).toBe(expectedColor);
+      if (!aboutItemContent) {
+        throw new Error('O item "About" não foi encontrado no documento.');
       }
+      const borderBottomColor =
+        window.getComputedStyle(aboutItemContent).borderBottomColor;
+      const expectedColor = colors.background01;
+      expect(borderBottomColor).toBe(expectedColor);
     });
 
     test('Deve mudar os textos do header para "Português" Quando clicar no botão "Português"', () => {
@@ -182,7 +180,7 @@ describe('Header', () => {
       const idiomaPortugues = component.getByTestId('idioma-portugues');
       fireEvent.click(idiomaPortugues);
       expect(component.getByText(/Pagina Inicial/i)).toBeDefined();
-      expect(component.getByText(/Conteúdo/i)).toBeDefined();
+      expect(component.getByText(/projetos/i)).toBeDefined();
       expect(component.getByText(/Sobre/i)).toBeDefined();
     });
 
@@ -192,7 +190,7 @@ describe('Header', () => {
       const idiomaFrances = component.getByTestId('idioma-frances');
       fireEvent.click(idiomaFrances);
       expect(component.getByText(/Accueil/i)).toBeDefined();
-      expect(component.getByText(/Contenu/i)).toBeDefined();
+      expect(component.getByText(/Projets/i)).toBeDefined();
       expect(component.getByText(/À propos/i)).toBeDefined();
     });
   });

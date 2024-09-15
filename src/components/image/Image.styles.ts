@@ -2,8 +2,7 @@ import styled, {keyframes, css} from 'styled-components';
 import InlineSVG from 'react-inlinesvg';
 
 export interface Props {
-  alt?: string;
-  cor?: string;
+  color?: string;
   altura?: number | string;
   largura?: number | string;
   cursor?: 'default' | 'pointer';
@@ -35,12 +34,17 @@ const spinnerAnimation = (velocidade: number) => css`
 
 export const ContainerImage = styled.div<ExtraProps>`
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: ${({$largura}) => $largura};
   height: ${({$altura}) => $altura};
   box-sizing: border-box;
 `;
 
 export const ImageStyled = styled.img<Props & ExtraProps>`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   pointer-events: ${({cursor}) => (cursor === 'default' ? 'none' : 'auto')};
   cursor: ${({cursor}) => cursor ?? 'default'};
   transform: rotate(${({$inclinacao}) => $inclinacao}deg);
@@ -49,13 +53,16 @@ export const ImageStyled = styled.img<Props & ExtraProps>`
 `;
 
 export const Svg = styled(InlineSVG).attrs<Props & ExtraProps>(
-  ({cor, $inclinacao}) => ({
+  ({color, $inclinacao}) => ({
     style: {
-      fill: cor,
+      fill: color,
       transform: `rotate(${$inclinacao}deg)`,
     },
   }),
 )<Props & ExtraProps>`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   pointer-events: ${({cursor}) => (cursor === 'default' ? 'none' : 'auto')};
   cursor: ${({cursor}) => cursor ?? 'default'};
   ${({$spinner, $velocidadeSpinner}) =>

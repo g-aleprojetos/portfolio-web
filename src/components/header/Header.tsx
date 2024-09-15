@@ -48,7 +48,7 @@ export const Header = () => {
               <S.TextoHeader
                 $backgroundblack={themeDark}
                 $isActivated={location.pathname === routes.Projects}>
-                {t('contents')}
+                {t('projects')}
               </S.TextoHeader>
             </S.Navegacao>
           </S.ItemContent>

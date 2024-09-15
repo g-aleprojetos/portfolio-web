@@ -22,8 +22,10 @@ export const ContainerLogo = styled.div`
   }
 `;
 
-export const HeaderContainer = styled.div`
+export const HeaderContainer = styled.header`
   display: flex;
+  position: fixed;
+  top: 0;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -31,9 +33,11 @@ export const HeaderContainer = styled.div`
   padding-top: ${margin.small}px;
   padding-left: ${margin.xxlarge}px;
   box-sizing: border-box;
+  z-index: 10;
 
   @media screen and (${media.tablet}) {
     justify-content: center;
+    padding: 0px;
   }
 `;
 
@@ -78,6 +82,9 @@ export const Nav = styled.nav`
 `;
 
 export const Navegacao = styled(Link)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
 `;
 

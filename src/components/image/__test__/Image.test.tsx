@@ -30,7 +30,7 @@ describe('Image', () => {
     });
 
     test('DEVE aplicar cor corretamente no SVG', () => {
-      render(<Image src="icon.svg" cor="red" />);
+      render(<Image src="icon.svg" color="red" />);
       const svgElement = screen.getByTestId('svg');
       expect(svgElement).toHaveStyle('fill: red');
     });

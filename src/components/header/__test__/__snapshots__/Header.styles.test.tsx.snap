@@ -24,6 +24,8 @@ exports[`Header.styles ContainerLogo DEVE ser igual ao snapshot 1`] = `
 exports[`Header.styles HeaderContainer DEVE ser igual ao snapshot 1`] = `
 .c0 {
   display: flex;
+  position: fixed;
+  top: 0;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -31,16 +33,18 @@ exports[`Header.styles HeaderContainer DEVE ser igual ao snapshot 1`] = `
   padding-top: 16px;
   padding-left: 64px;
   box-sizing: border-box;
+  z-index: 10;
 }
 
 @media screen and ((max-width: 768px)) {
   .c0 {
     justify-content: center;
+    padding: 0px;
   }
 }
 
 <div>
-  <div
+  <header
     class="c0"
   />
 </div>
@@ -81,6 +85,9 @@ exports[`Header.styles Nav DEVE ser igual ao snapshot 1`] = `
 
 exports[`Header.styles Navegacao DEVE ser igual ao snapshot 1`] = `
 .c0 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
 }
 

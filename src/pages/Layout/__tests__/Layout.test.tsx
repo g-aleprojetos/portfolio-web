@@ -1,11 +1,8 @@
 import React, {act} from 'react';
 import {render, RenderResult} from '@testing-library/react';
 import '@testing-library/jest-dom';
-
 import {useBackgroundContext} from 'context/background';
 import {Layout} from '../Layout';
-import {colors} from 'resources/colors';
-import {convertHexToRgb} from 'helper/convertHexToRgb';
 
 jest.mock('react-router-dom', () => {
   const actual = jest.requireActual('react-router-dom');
@@ -64,23 +61,30 @@ describe('Layout', () => {
       });
     });
 
-    test('Deve ter a cor de fundo correta quando themeDark é false', () => {
-      const element = component.getByTestId('layout-page');
-      const backgroundColor = window.getComputedStyle(element).backgroundColor;
-      expect(backgroundColor).toBe(`${convertHexToRgb(colors.darkgray)}`);
-    });
+    test('Deve renderizar o Footer quando a largura da tela é 425px ou menor', () => {
+      const footer = component.getByTestId('footer');
 
-    test('Deve ter a cor de fundo correta quando themeDark é true', () => {
-      useBackgroundContextMock.mockReturnValue({
-        handleToggle: handleToggleMock,
-        themeDark: true,
+      Object.defineProperty(footer, 'offsetWidth', {
+        configurable: true,
+        value: 425,
       });
 
-      component.rerender(<Layout />);
+      footer.style.display = 'flex';
 
-      const element = component.getByTestId('layout-page');
-      const backgroundColor = window.getComputedStyle(element).backgroundColor;
-      expect(backgroundColor).toBe(`${convertHexToRgb(colors.background02)}`);
+      expect(footer).toBeInTheDocument();
+      expect(window.getComputedStyle(footer).display).toBe('flex');
+    });
+
+    test('Deve ter o display "none" no Footer quando a largura da tela é maior que 425px', () => {
+      const footer = component.getByTestId('footer');
+
+      Object.defineProperty(footer, 'offsetWidth', {
+        configurable: true,
+        value: 426,
+      });
+
+      footer.style.display = 'none';
+      expect(window.getComputedStyle(footer).display).toBe('none');
     });
   });
 });

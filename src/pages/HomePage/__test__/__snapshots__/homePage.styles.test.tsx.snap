@@ -20,12 +20,17 @@ exports[`HomePage.styles Container DEVE ser igual ao snapshot 1`] = `
 exports[`HomePage.styles Image DEVE ser igual ao snapshot 1`] = `
 .c0 {
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 377px;
   height: 377px;
   box-sizing: border-box;
 }
 
 .c1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   pointer-events: auto;
   cursor: default;
   transform: rotate(0deg);

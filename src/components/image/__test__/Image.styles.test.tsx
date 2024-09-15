@@ -110,7 +110,7 @@ describe('Image.styles', () => {
 
   test('Svg DEVE ser igual ao snapshot QUANDO a cor for fornecida', async () => {
     await act(async () => {
-      const {container} = render(<Svg src="path/to/your.svg" cor="red" />);
+      const {container} = render(<Svg src="path/to/your.svg" color="red" />);
       expect(container).toMatchSnapshot();
     });
   });

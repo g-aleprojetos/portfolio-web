@@ -3,8 +3,9 @@ import {namespaces} from '../i18n.constants';
 export const fr = {
   [namespaces.pages.header]: {
     home: 'Accueil',
-    contents: 'Contenu',
+    projects: 'Projets',
     about: 'À propos',
+    settings: 'Paramètres',
   },
   [namespaces.components.dropdown]: {
     portuguese: 'Portugais',

@@ -49,12 +49,17 @@ exports[`Image.styles DropdownContainer DEVE ser igual ao snapshot 1`] = `
 exports[`Image.styles Flag DEVE ser igual ao snapshot 1`] = `
 .c0 {
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 24px;
   height: 24px;
   box-sizing: border-box;
 }
 
 .c1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   pointer-events: auto;
   cursor: default;
 }

@@ -5,9 +5,6 @@ interface IconeProps extends Props {
   testId?: string;
   src: string;
   alt?: string;
-  cor?: string;
-  spinner?: boolean;
-  velocidadeSpinner?: number;
 }
 
 export const Image = ({
@@ -20,7 +17,7 @@ export const Image = ({
   inclinacao = 0,
   spinner = false,
   velocidadeSpinner = 0,
-  cor,
+  color,
   ...props
 }: Readonly<IconeProps>) => {
   const isSvg = src.endsWith('.svg');
@@ -38,14 +35,13 @@ export const Image = ({
       data-testid="container-image"
       $largura={largura}
       $altura={altura}
-      {...props} // Aqui, props não conterá mais testId
-    >
+      {...props}>
       {isSvg ? (
         <Svg
           data-testid={testId ? `${testId}-svg` : 'svg'}
           src={src}
           title={alt}
-          cor={cor}
+          color={color}
           cursor={cursor}
           $inclinacao={inclinacao}
           $spinner={spinner}
