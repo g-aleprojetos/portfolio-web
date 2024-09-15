@@ -21,7 +21,7 @@ As branches principais são:
 ## Clonar projeto
 
 ```shell
-git clone https://github.com/g-aleprojetos/portifolio-web.git
+git clone https://github.com/g-aleprojetos/portfolio-web.git
 ```
 
 ## Commit

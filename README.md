@@ -1,8 +1,8 @@
-<H1 align="center">Portifolio</H1>
+<H1 align="center">Portfolio</H1>
 
 <div align="center">
 
-[![Coverage Status](https://coveralls.io/repos/github/g-aleprojetos/portifolio-web/badge.svg)](https://coveralls.io/github/g-aleprojetos/portifolio-web)
+[![Coverage Status](https://coveralls.io/repos/github/g-aleprojetos/portfolio-web/badge.svg)](https://coveralls.io/github/g-aleprojetos/portfolio-web)
  [![MIT Licensed](https://img.shields.io/badge/license-MIT-green.svg)](https://tldrlegal.com/license/mit-license)
  [![style: styled-components](https://img.shields.io/badge/style-%F0%9F%92%85%20styled--components-orange.svg?colorB=daa357&colorA=db748e)](https://github.com/styled-components/styled-components)
 
@@ -27,13 +27,13 @@
 </br></br>
 
 ## Pagina em produção
-### [https://github.com/g-aleprojetos/portifolio-web.git](https://github.com/g-aleprojetos/portifolio-web.git)
+### [https://github.com/g-aleprojetos/portfolio-web.git](https://github.com/g-aleprojetos/portfolio-web.git)
 
 </br></br>
 ### Clonar projeto
 
 ```shell
-git clone https://github.com/g-aleprojetos/portifolio-web.git
+git clone https://github.com/g-aleprojetos/portfolio-web.git
 ```
 ### Instala as bibliotecas
 
