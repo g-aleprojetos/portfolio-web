@@ -31,7 +31,7 @@ export const WebRoutes = () => {
           Component: AboutPage,
         },
         {
-          path: routes.NotFound,
+          path: '*',
           Component: NotFoundPage,
         },
       ],

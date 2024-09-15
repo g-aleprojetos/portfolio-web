@@ -2,7 +2,7 @@
   "name": "portifolio-web",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://g-aleprojetos.github.io/portifolio-web/",
+  "homepage": "https://g-aleprojetos.github.io/portfolio-web/",
   "dependencies": {
     "@babel/plugin-transform-class-properties": "^7.24.7",
     "@babel/plugin-transform-nullish-coalescing-operator": "^7.24.7",

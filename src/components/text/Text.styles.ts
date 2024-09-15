@@ -5,6 +5,7 @@ import texts from 'resources/texts';
 
 export type TextProps = {
   id?: string;
+  type?: 'p' | 'h1' | 'h2' | 'h3' | 'h4';
   color?: string;
   tamanho?: 12 | 14 | 16 | 18 | 24;
   alturaDeLinha?: 18 | 22 | 24 | 26 | 34;
@@ -30,6 +31,7 @@ export const TextStyled = styled.p<Props & TextProps>`
   margin-top: ${({$marginTop}) => $marginTop ?? 0}px;
   text-transform: ${({$toUpper}) => ($toUpper ? 'uppercase' : 'none')};
   cursor: ${({cursor}) => cursor ?? 'text'};
+
   ${({$alturaDeLinha}) =>
     $alturaDeLinha &&
     css`
