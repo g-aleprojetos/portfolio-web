@@ -1,19 +1,24 @@
 {
   "files": {
-    "main.css": "/portifolio-web/static/css/main.8f8c2671.css",
-    "main.js": "/portifolio-web/static/js/main.27a2eace.js",
-    "static/media/manutencao.svg": "/portifolio-web/static/media/manutencao.8879956a312017a106a09e808c90eb2a.svg",
-    "static/media/AvertaStd-Regular.ttf": "/portifolio-web/static/media/AvertaStd-Regular.bff500d7e76a1dab42d1.ttf",
-    "static/media/AvertaStd-Bold.ttf": "/portifolio-web/static/media/AvertaStd-Bold.035345d433cff7977a3f.ttf",
-    "static/media/iFlag-USA-active.svg": "/portifolio-web/static/media/iFlag-USA-active.dd9eb76d1122aff6de1d6bea1db0c7ea.svg",
-    "static/media/iFlag-Brasil-active.svg": "/portifolio-web/static/media/iFlag-Brasil-active.18c7836b2a7908eed10ec1feb10b9d32.svg",
-    "index.html": "/portifolio-web/index.html",
-    "static/media/iFlag-France-active.svg": "/portifolio-web/static/media/iFlag-France-active.5f901c935826801ac48c67bca2811008.svg",
-    "main.8f8c2671.css.map": "/portifolio-web/static/css/main.8f8c2671.css.map",
-    "main.27a2eace.js.map": "/portifolio-web/static/js/main.27a2eace.js.map"
+    "main.css": "/portfolio-web/static/css/main.da5c5afa.css",
+    "main.js": "/portfolio-web/static/js/main.a34960f3.js",
+    "static/media/manutencao.svg": "/portfolio-web/static/media/manutencao.352d6b5690bdb3bd69ae781bb8ef6d26.svg",
+    "static/media/AvertaStd-Regular.ttf": "/portfolio-web/static/media/AvertaStd-Regular.bff500d7e76a1dab42d1.ttf",
+    "static/media/AvertaStd-Bold.ttf": "/portfolio-web/static/media/AvertaStd-Bold.035345d433cff7977a3f.ttf",
+    "static/media/logo.svg": "/portfolio-web/static/media/logo.661dfb2fee2a71aa9ddec6de04d730ea.svg",
+    "static/media/iFlag-USA-active.svg": "/portfolio-web/static/media/iFlag-USA-active.dd9eb76d1122aff6de1d6bea1db0c7ea.svg",
+    "static/media/iFlag-Brasil-active.svg": "/portfolio-web/static/media/iFlag-Brasil-active.18c7836b2a7908eed10ec1feb10b9d32.svg",
+    "static/media/iSettings.svg": "/portfolio-web/static/media/iSettings.aaa31d9cec43eb16d2975f1a4dcae111.svg",
+    "index.html": "/portfolio-web/index.html",
+    "static/media/iFlag-France-active.svg": "/portfolio-web/static/media/iFlag-France-active.5f901c935826801ac48c67bca2811008.svg",
+    "static/media/iUser.svg": "/portfolio-web/static/media/iUser.a7107799fbf63da8665802af04706b17.svg",
+    "static/media/iHome.svg": "/portfolio-web/static/media/iHome.0517e151d678074dde2ca0d9d43b8094.svg",
+    "static/media/iDashBoard.svg": "/portfolio-web/static/media/iDashBoard.de7b9ea3d9a7deef5436048a19217a8e.svg",
+    "main.da5c5afa.css.map": "/portfolio-web/static/css/main.da5c5afa.css.map",
+    "main.a34960f3.js.map": "/portfolio-web/static/js/main.a34960f3.js.map"
   },
   "entrypoints": [
-    "static/css/main.8f8c2671.css",
-    "static/js/main.27a2eace.js"
+    "static/css/main.da5c5afa.css",
+    "static/js/main.a34960f3.js"
   ]
 }
