@@ -22,4 +22,5 @@ export const colors = {
   black50per: '#00000080',
   black: '#000000',
   yellow: '#FFE879',
+  vert: '#29fd53',
 };

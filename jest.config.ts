@@ -1,4 +1,4 @@
-import type {Config} from 'jest';
+import type {JestConfigWithTsJest} from 'ts-jest';
 import {compilerOptions} from './tsconfig.json';
 
 function getAliases() {
@@ -10,7 +10,7 @@ function getAliases() {
   return paths;
 }
 
-const config: Config = {
+const config: JestConfigWithTsJest = {
   bail: 1,
   clearMocks: true,
   collectCoverage: false,
