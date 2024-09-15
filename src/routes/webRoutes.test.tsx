@@ -18,7 +18,7 @@ jest.mock('react-router-dom', () => {
 });
 
 describe('WebRoutes', () => {
-  const basename = '/portifolio-web';
+  const basename = '/portfolio-web';
 
   beforeEach(() => {
     jest.clearAllMocks();
