@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import {Link} from 'react-router-dom';
 import {colors} from 'resources/colors';
 import {Image} from 'components/image';
 import {Text} from 'components/text';
@@ -81,7 +80,7 @@ export const Nav = styled.nav`
   }
 `;
 
-export const Navegacao = styled(Link)`
+export const Navegacao = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;

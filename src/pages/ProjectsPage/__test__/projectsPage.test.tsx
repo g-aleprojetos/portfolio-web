@@ -15,6 +15,10 @@ describe('ProjectsPage', () => {
       const tree = component.getByTestId('test-projects-page');
       expect(tree).toBeDefined();
     });
+    test('Deve renderizar o texto "ProjectsPage".', () => {
+      const linkElement = component.getByText(/ProjectsPage/i);
+      expect(linkElement).toBeInTheDocument();
+    });
     test(`DEVE renderizar a "Imagem" na pagina`, async () => {
       const imagem = component.getByTestId('test-image-projects-page');
       expect(imagem).toBeDefined();

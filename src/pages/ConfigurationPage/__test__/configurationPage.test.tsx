@@ -15,6 +15,10 @@ describe('ConfigurationPage', () => {
       const tree = component.getByTestId('test-configuration-page');
       expect(tree).toBeDefined();
     });
+    test('Deve renderizar o texto "SettingsPage".', () => {
+      const linkElement = component.getByText(/SettingsPage/i);
+      expect(linkElement).toBeInTheDocument();
+    });
     test(`DEVE renderizar a "Imagem" na pagina`, async () => {
       const imagem = component.getByTestId('test-image-configuration-page');
       expect(imagem).toBeDefined();

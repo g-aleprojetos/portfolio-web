@@ -1,37 +1,36 @@
+import '@testing-library/jest-dom';
 import React, {act} from 'react';
 import {fireEvent, render, RenderResult} from '@testing-library/react';
-import '@testing-library/jest-dom';
 import {useBackgroundContext} from 'context/background';
-import {useLocation} from 'react-router-dom';
+import {useCurrentPageContext} from 'context/routesContext';
 import {Footer} from '../footer';
-
-jest.mock('react-router-dom', () => {
-  const actual = jest.requireActual('react-router-dom');
-  return {
-    ...actual,
-    Link: ({to, children}: {to: string; children: React.ReactNode}) => {
-      return <a href={to}>{children}</a>;
-    },
-    useLocation: jest.fn().mockReturnValue({pathname: '/'}),
-  };
-});
+import {InternalRoutes} from 'resources/enun/InternalRoutes';
 
 jest.mock('context/background', () => ({
   useBackgroundContext: jest.fn(),
 }));
 
+jest.mock('context/routesContext', () => ({
+  useCurrentPageContext: jest.fn(),
+}));
+
 const useBackgroundContextMock = useBackgroundContext as jest.Mock;
-const useLocationMock = useLocation as jest.Mock;
+const useCurrentPageContextMock = useCurrentPageContext as jest.Mock;
 
 describe('Footer', () => {
   let component: RenderResult;
   const handleToggleMock = jest.fn();
+  const handleCurrentPageMock = jest.fn();
 
   describe('Renderização', () => {
     beforeEach(() => {
       useBackgroundContextMock.mockReturnValue({
         handleToggle: handleToggleMock,
         themeDark: false,
+      });
+      useCurrentPageContextMock.mockReturnValue({
+        currentPage: InternalRoutes.Home,
+        handleCurrentPage: handleCurrentPageMock,
       });
       act(() => {
         component = render(<Footer />);
@@ -103,44 +102,42 @@ describe('Footer', () => {
         handleToggle: handleToggleMock,
         themeDark: false,
       });
+      useCurrentPageContextMock.mockReturnValue({
+        currentPage: InternalRoutes.Home,
+        handleCurrentPage: handleCurrentPageMock,
+      });
+      act(() => {
+        component = render(<Footer />);
+      });
     });
 
-    test('Deve mudar a rota para Home ao clicar no ícone de Home.', () => {
-      useLocationMock.mockReturnValue({pathname: '/projects'});
-      const {getByTestId} = render(<Footer />);
-
-      const homeLink = getByTestId('test-image-icon-home');
-
-      fireEvent.click(homeLink);
-
-      expect(homeLink.closest('a')).toHaveAttribute('href', '/');
+    test('Deve chamar o handleCurrentPageMock com a rota Projects QUANDO estiver outra página e clicar no Projects', () => {
+      fireEvent.click(component.getByText(/Projects/i));
+      expect(handleCurrentPageMock).toHaveBeenCalledWith(
+        InternalRoutes.Projects,
+      );
     });
 
-    test('Deve mudar a rota para Projects ao clicar no ícone de Projects.', () => {
-      const {getByTestId} = render(<Footer />);
-      const projectsLink = getByTestId('test-image-icon-projects');
-
-      fireEvent.click(projectsLink);
-
-      expect(projectsLink.closest('a')).toHaveAttribute('href', '/projects');
+    test('Deve chamar o handleCurrentPageMock com a rota About QUANDO estiver outra página e clicar no About', () => {
+      fireEvent.click(component.getByText(/About/i));
+      expect(handleCurrentPageMock).toHaveBeenCalledWith(InternalRoutes.About);
     });
 
-    test('Deve mudar a rota para About ao clicar no ícone de About.', () => {
-      const {getByTestId} = render(<Footer />);
-      const aboutLink = getByTestId('test-image-icon-about');
-
-      fireEvent.click(aboutLink);
-
-      expect(aboutLink.closest('a')).toHaveAttribute('href', '/about');
+    test('Deve chamar o handleCurrentPageMock com a rota Settings QUANDO estiver outra página e clicar no Settings', () => {
+      fireEvent.click(component.getByText(/Settings/i));
+      expect(handleCurrentPageMock).toHaveBeenCalledWith(
+        InternalRoutes.Settings,
+      );
     });
 
-    test('Deve mudar a rota para Settings ao clicar no ícone de Settings.', () => {
-      const {getByTestId} = render(<Footer />);
-      const settingsLink = getByTestId('test-image-icon-settings');
-
-      fireEvent.click(settingsLink);
-
-      expect(settingsLink.closest('a')).toHaveAttribute('href', '/settings');
+    test('Deve chamar o handleCurrentPageMock com a rota home QUANDO estiver outra página e clicar no Home', () => {
+      useCurrentPageContextMock.mockReturnValueOnce({
+        currentPage: InternalRoutes.About,
+        handleCurrentPage: handleCurrentPageMock,
+      });
+      component.rerender(<Footer />);
+      fireEvent.click(component.getByText(/Home/i));
+      expect(handleCurrentPageMock).toHaveBeenCalledWith(InternalRoutes.Home);
     });
   });
 });

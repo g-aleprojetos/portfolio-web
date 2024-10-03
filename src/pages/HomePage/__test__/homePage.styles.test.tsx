@@ -14,4 +14,14 @@ describe('HomePage.styles', () => {
     const {container} = render(<S.Imagem src={manutencao} />);
     expect(container).toMatchSnapshot();
   });
+
+  test('Title DEVE ser igual ao snapshot QUANDO $backgroundblack for true', () => {
+    const {container} = render(<S.Title $backgroundblack={true} />);
+    expect(container).toMatchSnapshot();
+  });
+
+  test('Title DEVE ser igual ao snapshot QUANDO $backgroundblack for false', () => {
+    const {container} = render(<S.Title $backgroundblack={false} />);
+    expect(container).toMatchSnapshot();
+  });
 });

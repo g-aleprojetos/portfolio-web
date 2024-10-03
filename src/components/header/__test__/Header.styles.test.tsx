@@ -1,6 +1,5 @@
 import React from 'react';
 import {render} from '@testing-library/react';
-import {MemoryRouter} from 'react-router-dom';
 import {colors} from 'resources/colors';
 import {margin} from 'resources/margins';
 import '@testing-library/jest-dom';
@@ -59,11 +58,7 @@ describe('Header.styles', () => {
   });
 
   test('Navegacao DEVE ser igual ao snapshot', () => {
-    const {container} = render(
-      <MemoryRouter>
-        <S.Navegacao to="/" />
-      </MemoryRouter>,
-    );
+    const {container} = render(<S.Navegacao />);
     expect(container).toMatchSnapshot();
   });
 

@@ -35,10 +35,13 @@ describe('Layout', () => {
         themeDark: false,
       });
       act(() => {
-        component = render(<Layout />);
+        component = render(
+          <Layout>
+            <div data-testid="child-element">Child Content</div>
+          </Layout>,
+        );
       });
     });
-
     test('Deve renderizar o Layout', () => {
       const element = component.getByTestId('layout-page');
       expect(element).toBeInTheDocument();
@@ -47,6 +50,12 @@ describe('Layout', () => {
     test('Deve renderizar o Cabeçalho.', () => {
       const linkElement = component.getByTestId('header');
       expect(linkElement).toBeInTheDocument();
+    });
+
+    test('Deve renderizar os filhos.', () => {
+      const childElement = component.getByTestId('child-element');
+      expect(childElement).toBeInTheDocument();
+      expect(childElement).toHaveTextContent('Child Content');
     });
   });
 
@@ -57,7 +66,11 @@ describe('Layout', () => {
         themeDark: false,
       });
       act(() => {
-        component = render(<Layout />);
+        component = render(
+          <Layout>
+            <div data-testid="child-element">Child Content</div>
+          </Layout>,
+        );
       });
     });
 

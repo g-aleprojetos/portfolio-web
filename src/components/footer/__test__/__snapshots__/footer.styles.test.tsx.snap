@@ -397,7 +397,6 @@ exports[`Footer.styles Navegacao DEVE ser igual ao snapshot 1`] = `
 <div>
   <a
     class="c0"
-    href="/"
   />
 </div>
 `;

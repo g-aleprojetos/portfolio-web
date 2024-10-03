@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import {WebRoutes} from 'routes/webRoutes';
 import {BackgroundProvider} from './context/background';
+import {CurrentPageProvider} from './context/routesContext';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
@@ -10,7 +11,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <BackgroundProvider>
-      <WebRoutes />
+      <CurrentPageProvider>
+        <WebRoutes />
+      </CurrentPageProvider>
     </BackgroundProvider>
   </React.StrictMode>,
 );
