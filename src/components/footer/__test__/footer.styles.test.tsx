@@ -1,6 +1,5 @@
 import React from 'react';
 import {render} from '@testing-library/react';
-import {MemoryRouter} from 'react-router-dom';
 import '@testing-library/jest-dom';
 import 'jest-styled-components';
 import * as S from '../footer.styles';
@@ -39,11 +38,7 @@ describe('Footer.styles', () => {
   });
 
   test('Navegacao DEVE ser igual ao snapshot', () => {
-    const {container} = render(
-      <MemoryRouter>
-        <S.Navegacao to="/" />
-      </MemoryRouter>,
-    );
+    const {container} = render(<S.Navegacao />);
     expect(container).toMatchSnapshot();
   });
 

@@ -15,6 +15,10 @@ describe('NotFoundPage', () => {
       const tree = component.getByTestId('test-notFound-page');
       expect(tree).toBeDefined();
     });
+    test('Deve renderizar o texto "NotFoundPage".', () => {
+      const linkElement = component.getByText(/NotFoundPage/i);
+      expect(linkElement).toBeInTheDocument();
+    });
     test(`DEVE renderizar a "Imagem" na pagina`, async () => {
       const imagem = component.getByTestId('test-image-notFound-page');
       expect(imagem).toBeDefined();

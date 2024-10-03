@@ -49,3 +49,41 @@ exports[`HomePage.styles Image DEVE ser igual ao snapshot 1`] = `
   </div>
 </div>
 `;
+
+exports[`HomePage.styles Title DEVE ser igual ao snapshot QUANDO $backgroundblack for false 1`] = `
+.c0 {
+  font-size: 14px;
+  font-family: AvertaStd-Regular;
+  color: #ffffff;
+  margin-top: 0px;
+  text-transform: uppercase;
+  cursor: default;
+}
+
+<div>
+  <h3
+    class="c0 "
+    color="#ffffff"
+    cursor="default"
+  />
+</div>
+`;
+
+exports[`HomePage.styles Title DEVE ser igual ao snapshot QUANDO $backgroundblack for true 1`] = `
+.c0 {
+  font-size: 14px;
+  font-family: AvertaStd-Regular;
+  color: #000000;
+  margin-top: 0px;
+  text-transform: uppercase;
+  cursor: default;
+}
+
+<div>
+  <h3
+    class="c0 "
+    color="#000000"
+    cursor="default"
+  />
+</div>
+`;
