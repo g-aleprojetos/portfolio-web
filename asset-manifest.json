@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio-web/static/css/main.da5c5afa.css",
-    "main.js": "/portfolio-web/static/js/main.700c616e.js",
+    "main.js": "/portfolio-web/static/js/main.effb7a7f.js",
     "static/media/manutencao.svg": "/portfolio-web/static/media/manutencao.352d6b5690bdb3bd69ae781bb8ef6d26.svg",
     "static/media/AvertaStd-Regular.ttf": "/portfolio-web/static/media/AvertaStd-Regular.bff500d7e76a1dab42d1.ttf",
     "static/media/AvertaStd-Bold.ttf": "/portfolio-web/static/media/AvertaStd-Bold.035345d433cff7977a3f.ttf",
@@ -15,10 +15,10 @@
     "static/media/iHome.svg": "/portfolio-web/static/media/iHome.0517e151d678074dde2ca0d9d43b8094.svg",
     "static/media/iDashBoard.svg": "/portfolio-web/static/media/iDashBoard.de7b9ea3d9a7deef5436048a19217a8e.svg",
     "main.da5c5afa.css.map": "/portfolio-web/static/css/main.da5c5afa.css.map",
-    "main.700c616e.js.map": "/portfolio-web/static/js/main.700c616e.js.map"
+    "main.effb7a7f.js.map": "/portfolio-web/static/js/main.effb7a7f.js.map"
   },
   "entrypoints": [
     "static/css/main.da5c5afa.css",
-    "static/js/main.700c616e.js"
+    "static/js/main.effb7a7f.js"
   ]
 }
