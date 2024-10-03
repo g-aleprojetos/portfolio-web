@@ -1,40 +1,41 @@
 import React from 'react';
 import {useBackgroundContext} from 'context/background';
+import {useCurrentPageContext} from 'context/routesContext';
 import {ToggleSwitch} from 'components/toggleSwitch';
 import {Dropdown} from 'components/dropDown';
 import {useTranslation} from 'react-i18next';
 import {namespaces} from 'utils/i18n/i18n.constants';
-import {useLocation} from 'react-router-dom';
-import routes from 'resources/routes';
+import {InternalRoutes} from 'resources/enun/InternalRoutes';
 import logo from 'assets/images/logo.svg';
 import 'utils/i18n';
 import * as S from './Header.styles';
 
 export const Header = () => {
   const {themeDark, handleToggle} = useBackgroundContext();
+  const {currentPage, handleCurrentPage} = useCurrentPageContext();
   const {t} = useTranslation(namespaces.pages.header);
-  const location = useLocation();
   return (
     <S.HeaderContainer data-testid={'header'}>
-      <S.Navegacao to={routes.Home}>
+      <S.Navegacao onClick={() => handleCurrentPage(InternalRoutes.Home)}>
         <S.ContainerLogo>
           <S.Imagem
             data-testid="test-image-logo"
             alt="Logo"
             src={logo}
-            $isActivated={location.pathname === routes.Home}
+            $isActivated={currentPage === InternalRoutes.Home}
           />
         </S.ContainerLogo>
       </S.Navegacao>
       <S.Nav>
         <S.Item>
           <S.ItemContent
+            data-testid={`${InternalRoutes.Home}-item-content`}
             $backgroundblack={themeDark}
-            $isActivated={location.pathname === routes.Home}>
-            <S.Navegacao to={routes.Home}>
+            $isActivated={currentPage === InternalRoutes.Home}>
+            <S.Navegacao onClick={() => handleCurrentPage(InternalRoutes.Home)}>
               <S.TextoHeader
                 $backgroundblack={themeDark}
-                $isActivated={location.pathname === routes.Home}>
+                $isActivated={currentPage === InternalRoutes.Home}>
                 {t('home')}
               </S.TextoHeader>
             </S.Navegacao>
@@ -42,12 +43,14 @@ export const Header = () => {
         </S.Item>
         <S.Item>
           <S.ItemContent
+            data-testid={`${InternalRoutes.Projects}-item-content`}
             $backgroundblack={themeDark}
-            $isActivated={location.pathname === routes.Projects}>
-            <S.Navegacao to={routes.Projects}>
+            $isActivated={currentPage === InternalRoutes.Projects}>
+            <S.Navegacao
+              onClick={() => handleCurrentPage(InternalRoutes.Projects)}>
               <S.TextoHeader
                 $backgroundblack={themeDark}
-                $isActivated={location.pathname === routes.Projects}>
+                $isActivated={currentPage === InternalRoutes.Projects}>
                 {t('projects')}
               </S.TextoHeader>
             </S.Navegacao>
@@ -55,12 +58,14 @@ export const Header = () => {
         </S.Item>
         <S.Item>
           <S.ItemContent
+            data-testid={`${InternalRoutes.About}-item-content`}
             $backgroundblack={themeDark}
-            $isActivated={location.pathname === routes.About}>
-            <S.Navegacao to={routes.About}>
+            $isActivated={currentPage === InternalRoutes.About}>
+            <S.Navegacao
+              onClick={() => handleCurrentPage(InternalRoutes.About)}>
               <S.TextoHeader
                 $backgroundblack={themeDark}
-                $isActivated={location.pathname === routes.About}>
+                $isActivated={currentPage === InternalRoutes.About}>
                 {t('about')}
               </S.TextoHeader>
             </S.Navegacao>

@@ -2,24 +2,15 @@ import React from 'react';
 import {render, screen, waitFor, act} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import {WebRoutes} from './webRoutes';
-import routes from 'resources/routes';
-import {createBrowserRouter} from 'react-router-dom';
+import {useCurrentPageContext} from 'context/routesContext';
+import {InternalRoutes} from 'resources/enun/InternalRoutes';
 
-const createBrowserRouterMock = createBrowserRouter as jest.Mock;
-jest.mock('react-router-dom', () => {
-  const actual = jest.requireActual('react-router-dom');
-  return {
-    ...actual,
-    json: jest.fn().mockImplementation(actual.json),
-    createBrowserRouter: jest
-      .fn()
-      .mockImplementation(actual.createBrowserRouter),
-  };
-});
+jest.mock('context/routesContext', () => ({
+  useCurrentPageContext: jest.fn(),
+}));
 
+const useCurrentPageContextMock = useCurrentPageContext as jest.Mock;
 describe('WebRoutes', () => {
-  const basename = '/portfolio-web';
-
   beforeEach(() => {
     jest.clearAllMocks();
   });
@@ -28,17 +19,13 @@ describe('WebRoutes', () => {
     beforeEach(
       async () =>
         await act(async () => {
-          window.history.pushState({}, '', `${basename}${routes.Home}`);
+          useCurrentPageContextMock.mockReturnValue({
+            currentPage: InternalRoutes.Home,
+            handleCurrentPage: jest.fn(),
+          });
           render(<WebRoutes />);
         }),
     );
-
-    test('DEVE criar o router com createBrowserRouter', async () => {
-      expect(createBrowserRouterMock).toHaveBeenCalledWith(
-        expect.any(Array),
-        expect.objectContaining({basename}),
-      );
-    });
 
     test('Deve renderizar o layout page', async () => {
       await waitFor(() => {
@@ -48,9 +35,12 @@ describe('WebRoutes', () => {
   });
 
   describe('HomePage', () => {
-    test(`Deve renderizar a página Home na rota ${routes.Home}`, async () => {
+    test(`Deve renderizar a página Home na rota ${InternalRoutes.Home}`, async () => {
       await act(async () => {
-        window.history.pushState({}, '', `${basename}${routes.Home}`);
+        useCurrentPageContextMock.mockReturnValue({
+          currentPage: InternalRoutes.Home,
+          handleCurrentPage: jest.fn(),
+        });
         render(<WebRoutes />);
       });
 
@@ -61,9 +51,12 @@ describe('WebRoutes', () => {
   });
 
   describe('ProjectsPage', () => {
-    test(`Deve renderizar a página Projects na rota ${routes.Projects}`, async () => {
+    test(`Deve renderizar a página Projects na rota ${InternalRoutes.Projects}`, async () => {
       await act(async () => {
-        window.history.pushState({}, '', `${basename}${routes.Projects}`);
+        useCurrentPageContextMock.mockReturnValue({
+          currentPage: InternalRoutes.Projects,
+          handleCurrentPage: jest.fn(),
+        });
         render(<WebRoutes />);
       });
 
@@ -74,9 +67,12 @@ describe('WebRoutes', () => {
   });
 
   describe('AboutPage', () => {
-    test(`Deve renderizar a página About na rota ${routes.About}`, async () => {
+    test(`Deve renderizar a página About na rota ${InternalRoutes.About}`, async () => {
       await act(async () => {
-        window.history.pushState({}, '', `${basename}${routes.About}`);
+        useCurrentPageContextMock.mockReturnValue({
+          currentPage: InternalRoutes.About,
+          handleCurrentPage: jest.fn(),
+        });
         render(<WebRoutes />);
       });
 
@@ -86,10 +82,31 @@ describe('WebRoutes', () => {
     });
   });
 
+  describe('ConfigurationPage', () => {
+    test(`Deve renderizar a página About na rota ${InternalRoutes.Settings}`, async () => {
+      await act(async () => {
+        useCurrentPageContextMock.mockReturnValue({
+          currentPage: InternalRoutes.Settings,
+          handleCurrentPage: jest.fn(),
+        });
+        render(<WebRoutes />);
+      });
+
+      await waitFor(() => {
+        expect(
+          screen.getByTestId('test-configuration-page'),
+        ).toBeInTheDocument();
+      });
+    });
+  });
+
   describe('NotFoundPage', () => {
     test('Deve renderizar a página NotFound para rotas inexistentes', async () => {
       await act(async () => {
-        window.history.pushState({}, '', `${basename}/non-existent-route`);
+        useCurrentPageContextMock.mockReturnValue({
+          currentPage: 'rota-inexistente',
+          handleCurrentPage: jest.fn(),
+        });
         render(<WebRoutes />);
       });
 

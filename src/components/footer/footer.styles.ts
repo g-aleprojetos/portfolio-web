@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import {Link} from 'react-router-dom';
 import {Image} from 'components/image';
 import {margin} from 'resources/margins';
 import {media} from 'resources/media';
@@ -70,7 +69,7 @@ export const Item = styled.li<PropsExtra>`
   transition: 0.5s;
 `;
 
-export const Navegacao = styled(Link)`
+export const Navegacao = styled.a`
   display: flex;
   position: relative;
   justify-content: center;

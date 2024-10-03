@@ -1,47 +1,30 @@
 import React from 'react';
-import {
-  RouterProvider,
-  RouteObject,
-  createBrowserRouter,
-} from 'react-router-dom';
-import routes from 'resources/routes';
 import {AboutPage} from 'pages/AboutPage';
 import {HomePage} from 'pages/HomePage';
 import {NotFoundPage} from 'pages/NotFoundPage';
 import {ProjectsPage} from 'pages/ProjectsPage';
 import {Layout} from 'pages/Layout';
+import {InternalRoutes} from 'resources/enun/InternalRoutes';
+import {useCurrentPageContext} from 'context/routesContext';
+import {ConfigurationPage} from 'pages/ConfigurationPage';
 
 export const WebRoutes = () => {
-  const routeConfig: RouteObject[] = [
-    {
-      id: 'root-route',
-      path: routes.Home,
-      Component: Layout,
-      children: [
-        {
-          index: true,
-          Component: HomePage,
-        },
-        {
-          path: routes.Projects,
-          Component: ProjectsPage,
-        },
-        {
-          path: routes.About,
-          Component: AboutPage,
-        },
-        {
-          path: '*',
-          Component: NotFoundPage,
-        },
-      ],
-    },
-  ];
-  const basename = '/portfolio-web';
+  const {currentPage} = useCurrentPageContext();
 
-  const router = createBrowserRouter(routeConfig, {
-    basename,
-  });
+  const renderPage = () => {
+    switch (currentPage) {
+      case InternalRoutes.Home:
+        return <HomePage />;
+      case InternalRoutes.Projects:
+        return <ProjectsPage />;
+      case InternalRoutes.About:
+        return <AboutPage />;
+      case InternalRoutes.Settings:
+        return <ConfigurationPage />;
+      default:
+        return <NotFoundPage />;
+    }
+  };
 
-  return <RouterProvider router={router} />;
+  return <Layout>{renderPage()}</Layout>;
 };
