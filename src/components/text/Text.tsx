@@ -7,6 +7,7 @@ export function Text(props: TextProps) {
     alturaDeLinha,
     marginTop,
     toUpper,
+    fontWeight,
     type = 'p',
     ...rest
   } = props;
@@ -18,6 +19,7 @@ export function Text(props: TextProps) {
       $alturaDeLinha={alturaDeLinha}
       $marginTop={marginTop}
       $toUpper={toUpper}
+      $fontWeight={fontWeight}
       {...rest}
     />
   );

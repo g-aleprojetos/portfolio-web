@@ -6,13 +6,8 @@ export const Input = styled.input.attrs({type: 'checkbox'})`
   width: 0;
   height: 0;
 
-  &:checked + span {
-    background-color: ${colors.blue};
-  }
-
   &:checked + span:before {
     transform: translateX(23.4px);
-    background-color: ${colors.background01};
   }
 
   &:focus + span {

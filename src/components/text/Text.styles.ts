@@ -12,6 +12,7 @@ export type TextProps = {
   marginTop?: number;
   children?: string | React.ReactNode;
   peso?: 'bold' | 'medium';
+  fontWeight?: 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900;
   toUpper?: boolean;
   cursor?: 'default' | 'pointer' | 'text';
 };
@@ -21,6 +22,7 @@ interface Props {
   $alturaDeLinha?: number;
   $marginTop?: number;
   $toUpper?: boolean;
+  $fontWeight?: number;
 }
 
 export const TextStyled = styled.p<Props & TextProps>`
@@ -29,6 +31,7 @@ export const TextStyled = styled.p<Props & TextProps>`
     peso === 'bold' ? fonts.avertaBold : fonts.avertaRegular};
   color: ${({color}) => color ?? colors.background01};
   margin-top: ${({$marginTop}) => $marginTop ?? 0}px;
+  font-weight: ${({$fontWeight}) => $fontWeight ?? 'normal'};
   text-transform: ${({$toUpper}) => ($toUpper ? 'uppercase' : 'none')};
   cursor: ${({cursor}) => cursor ?? 'text'};
 

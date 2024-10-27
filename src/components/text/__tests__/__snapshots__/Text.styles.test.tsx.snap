@@ -6,6 +6,7 @@ exports[`TextStyled Component DEVE ser igual ao snapshot 1`] = `
   font-family: AvertaStd-Regular;
   color: #ffffff;
   margin-top: 0px;
+  font-weight: normal;
   text-transform: none;
   cursor: text;
 }

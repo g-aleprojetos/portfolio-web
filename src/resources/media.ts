@@ -1,4 +1,4 @@
-const devices = {
+export const devices = {
   xmobile: 375,
   mobile: 425,
   tablet: 768,

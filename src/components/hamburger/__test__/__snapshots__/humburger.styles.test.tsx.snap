@@ -1,0 +1,225 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`hamburger.styles Container DEVE ser igual ao snapshot 1`] = `
+.c0 {
+  display: none;
+  justify-content: space-around;
+  flex-flow: column nowrap;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 100;
+}
+
+@media (max-width: 768px) {
+  .c0 {
+    display: flex;
+  }
+}
+
+<div>
+  <button
+    class="c0"
+  />
+</div>
+`;
+
+exports[`hamburger.styles Container DEVE ser igual ao snapshot QUANDO $tamanho for passado pela props 1`] = `
+.c0 {
+  display: none;
+  justify-content: space-around;
+  flex-flow: column nowrap;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 100;
+}
+
+@media (max-width: 768px) {
+  .c0 {
+    display: flex;
+  }
+}
+
+<div>
+  <button
+    class="c0"
+  />
+</div>
+`;
+
+exports[`hamburger.styles Span DEVE ser igual ao snapshot com $open false 1`] = `
+.c0 {
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  transform-origin: 2px;
+  transition: all 0.3s linear;
+}
+
+.c1 {
+  transform: rotate(0);
+}
+
+<div>
+  <span
+    class="c0 c1"
+  />
+</div>
+`;
+
+exports[`hamburger.styles Span DEVE ser igual ao snapshot com $open true 1`] = `
+.c0 {
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  transform-origin: 2px;
+  transition: all 0.3s linear;
+}
+
+.c1 {
+  transform: rotate(45deg);
+}
+
+<div>
+  <span
+    class="c0 c1"
+  />
+</div>
+`;
+
+exports[`hamburger.styles SpanInferior DEVE ser igual ao snapshot com $open true 1`] = `
+.c0 {
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  transform-origin: 2px;
+  transition: all 0.3s linear;
+}
+
+.c1 {
+  transform: rotate(-45deg);
+}
+
+<div>
+  <span
+    class="c0 c1"
+  />
+</div>
+`;
+
+exports[`hamburger.styles SpanInferior DEVE ser igual ao snapshot com open false 1`] = `
+.c0 {
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  transform-origin: 2px;
+  transition: all 0.3s linear;
+}
+
+.c1 {
+  transform: rotate(0);
+}
+
+<div>
+  <span
+    class="c0 c1"
+  />
+</div>
+`;
+
+exports[`hamburger.styles SpanMeio DEVE ser igual ao snapshot com $open false 1`] = `
+.c0 {
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  transform-origin: 2px;
+  transition: all 0.3s linear;
+}
+
+.c1 {
+  opacity: 1;
+}
+
+<div>
+  <span
+    class="c0 c1"
+  />
+</div>
+`;
+
+exports[`hamburger.styles SpanMeio DEVE ser igual ao snapshot com $open true 1`] = `
+.c0 {
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  transform-origin: 2px;
+  transition: all 0.3s linear;
+}
+
+.c1 {
+  opacity: 0;
+}
+
+<div>
+  <span
+    class="c0 c1"
+  />
+</div>
+`;
+
+exports[`hamburger.styles SpanSuperior DEVE ser igual ao snapshot com $open false 1`] = `
+.c0 {
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  transform-origin: 2px;
+  transition: all 0.3s linear;
+}
+
+.c1 {
+  transform: rotate(0);
+}
+
+<div>
+  <span
+    class="c0 c1"
+  />
+</div>
+`;
+
+exports[`hamburger.styles SpanSuperior DEVE ser igual ao snapshot com $open true 1`] = `
+.c0 {
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  transform-origin: 2px;
+  transition: all 0.3s linear;
+}
+
+.c1 {
+  transform: rotate(45deg);
+}
+
+<div>
+  <span
+    class="c0 c1"
+  />
+</div>
+`;
