@@ -24,13 +24,15 @@ export const Container = styled.div<PropsExtra>`
   z-index: 10;
 `;
 
-export const ContainerFooter = styled.footer`
+export const ContainerFooter = styled.footer<PropsExtra>`
   display: none;
   position: fixed;
   bottom: 0;
   width: 100%;
   height: 70px;
-  border-top: 10px solid ${colors.darkgray};
+  border-top: 10px solid
+    ${({$backgroundblack}) =>
+      $backgroundblack ? colors.background01 : colors.darkgray};
   background: ${colors.darkgray};
 
   @media screen and (${media.mobile}) {
@@ -98,7 +100,7 @@ export const TextNavegation = styled(Text).attrs<PropsExtra>(
     $isActivated ? 'translateY(48px)' : 'translateY(20px)'};
 `;
 
-export const IndicatorPosition = (indicador?: number) => {
+const IndicatorPosition = (indicador?: number) => {
   switch (indicador) {
     case 0:
       return 'translateX(1px)';
@@ -120,7 +122,9 @@ export const Indicator = styled.div<PropsExtra>`
   height: 70px;
   border-radius: 50%;
   background-color: ${colors.vert};
-  border: 6px solid ${colors.darkgray};
+  border: 6px solid
+    ${({$backgroundblack}) =>
+      $backgroundblack ? colors.background01 : colors.darkgray};
   box-sizing: border-box;
   transition: transform 0.5s;
   transform: ${({$position}) => IndicatorPosition($position)};
@@ -134,7 +138,7 @@ export const Indicator = styled.div<PropsExtra>`
     height: 18px;
     background: transparent;
     border-top-right-radius: 20px;
-    box-shadow: 0px -10px 0 0 ${colors.darkgray};
+    box-shadow: 0px -10px 0 0 ${({$backgroundblack}) => ($backgroundblack ? colors.background01 : colors.darkgray)};
   }
 
   &::after {
@@ -146,6 +150,6 @@ export const Indicator = styled.div<PropsExtra>`
     height: 18px;
     background: transparent;
     border-top-left-radius: 20px;
-    box-shadow: 0px -10px 0 0 ${colors.darkgray};
+    box-shadow: 0px -10px 0 0 ${({$backgroundblack}) => ($backgroundblack ? colors.background01 : colors.darkgray)};
   }
 `;

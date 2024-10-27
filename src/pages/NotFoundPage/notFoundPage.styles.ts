@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import {Image} from 'components/image';
 import {Text} from 'components/text';
 import {colors} from 'resources/colors';
+import {margin} from 'resources/margins';
+import {devices} from 'resources/media';
 
 export interface ExtraProps {
   $backgroundblack?: boolean;
@@ -10,10 +12,15 @@ export interface ExtraProps {
 export const Container = styled.div`
   flex-grow: 1;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: calc(100vh - 116px);
+
+  @media screen and (min-width: ${devices.tablet}px) and (max-width: ${devices.laptop}px) {
+    padding-left: ${margin.xxlarge}px;
+  }
 `;
 
 export const Imagem = styled(Image).attrs({

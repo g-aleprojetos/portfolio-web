@@ -3,6 +3,7 @@ import {useBackgroundContext} from 'context/background';
 import {Header} from 'components/header';
 import {Footer} from 'components/footer';
 import 'utils/i18n';
+import {Sidebar} from 'components/sidebar';
 import * as S from './Layout.styles';
 
 interface LayoutProps {
@@ -15,7 +16,10 @@ export const Layout = ({children}: LayoutProps) => {
   return (
     <S.Container data-testid={'layout-page'} $backgroundblack={themeDark}>
       <Header />
-      <S.Content>{children}</S.Content>
+      <S.Content>
+        <Sidebar />
+        {children}
+      </S.Content>
       <Footer />
     </S.Container>
   );

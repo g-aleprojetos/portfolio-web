@@ -17,7 +17,7 @@ export const Footer = () => {
   const {t} = useTranslation(namespaces.pages.header);
 
   return (
-    <S.ContainerFooter data-testid="footer">
+    <S.ContainerFooter data-testid="footer" $backgroundblack={themeDark}>
       <S.Container data-testid="container-footer" $backgroundblack={themeDark}>
         <S.ContainerItem>
           <S.Item $isActivated={currentPage === InternalRoutes.Home}>
@@ -87,7 +87,10 @@ export const Footer = () => {
               </S.TextNavegation>
             </S.Navegacao>
           </S.Item>
-          <S.Indicator $position={getRouteIndex(currentPage)} />
+          <S.Indicator
+            $position={getRouteIndex(currentPage)}
+            $backgroundblack={themeDark}
+          />
         </S.ContainerItem>
       </S.Container>
     </S.ContainerFooter>

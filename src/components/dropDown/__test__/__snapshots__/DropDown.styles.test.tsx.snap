@@ -171,6 +171,7 @@ exports[`Image.styles Texto DEVE ser igual ao snapshot 1`] = `
   font-family: AvertaStd-Regular;
   color: #000000;
   margin-top: 0px;
+  font-weight: normal;
   text-transform: none;
   cursor: pointer;
 }

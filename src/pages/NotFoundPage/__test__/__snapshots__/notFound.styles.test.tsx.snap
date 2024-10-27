@@ -4,10 +4,17 @@ exports[`NotFoundPage.styles Container DEVE ser igual ao snapshot 1`] = `
 .c0 {
   flex-grow: 1;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: calc(100vh - 116px);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .c0 {
+    padding-left: 64px;
+  }
 }
 
 <div>
@@ -56,6 +63,7 @@ exports[`NotFoundPage.styles Title DEVE ser igual ao snapshot QUANDO $background
   font-family: AvertaStd-Regular;
   color: #ffffff;
   margin-top: 0px;
+  font-weight: normal;
   text-transform: uppercase;
   cursor: default;
 }
@@ -75,6 +83,7 @@ exports[`NotFoundPage.styles Title DEVE ser igual ao snapshot QUANDO $background
   font-family: AvertaStd-Regular;
   color: #000000;
   margin-top: 0px;
+  font-weight: normal;
   text-transform: uppercase;
   cursor: default;
 }
