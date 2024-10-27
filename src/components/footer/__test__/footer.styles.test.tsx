@@ -15,8 +15,48 @@ describe('Footer.styles', () => {
     expect(container).toMatchSnapshot();
   });
 
+  test('ContainerFooter DEVE ser igual ao snapshot QUANDO $backgroundblack for igual a true', () => {
+    const {container} = render(<S.ContainerFooter $backgroundblack={true} />);
+    expect(container).toMatchSnapshot();
+  });
+
+  test('ContainerFooter DEVE ser igual ao snapshot QUANDO $backgroundblack for igual a false', () => {
+    const {container} = render(<S.ContainerFooter $backgroundblack={false} />);
+    expect(container).toMatchSnapshot();
+  });
+
   test('ContainerItem DEVE ser igual ao snapshot', () => {
     const {container} = render(<S.ContainerItem />);
+    expect(container).toMatchSnapshot();
+  });
+
+  test('Indicator DEVE ser igual ao snapshot', () => {
+    const {container} = render(<S.Indicator />);
+    expect(container).toMatchSnapshot();
+  });
+
+  test('Indicator DEVE ser igual ao snapshot QUANDO $backgroundblack for true', () => {
+    const {container} = render(<S.Indicator $backgroundblack={true} />);
+    expect(container).toMatchSnapshot();
+  });
+
+  test('Indicator DEVE ser igual ao snapshot QUANDO $$position for 0', () => {
+    const {container} = render(<S.Indicator $position={0} />);
+    expect(container).toMatchSnapshot();
+  });
+
+  test('Indicator DEVE ser igual ao snapshot QUANDO $$position for 1', () => {
+    const {container} = render(<S.Indicator $position={1} />);
+    expect(container).toMatchSnapshot();
+  });
+
+  test('Indicator DEVE ser igual ao snapshot QUANDO $$position for 2', () => {
+    const {container} = render(<S.Indicator $position={2} />);
+    expect(container).toMatchSnapshot();
+  });
+
+  test('Indicator DEVE ser igual ao snapshot QUANDO $$position for 3', () => {
+    const {container} = render(<S.Indicator $position={3} />);
     expect(container).toMatchSnapshot();
   });
 

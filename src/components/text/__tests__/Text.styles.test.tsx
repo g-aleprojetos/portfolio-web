@@ -91,6 +91,13 @@ describe('TextStyled Component', () => {
     expect(container.firstChild).toHaveStyleRule('line-height', '20px');
   });
 
+  test('DEVE ter o font-weight igual a "500" QUANDO a propriedade $fontWeight for igual a "500"', () => {
+    const {container} = render(
+      <TextStyled $fontWeight={500}>Teste</TextStyled>,
+    );
+    expect(container.firstChild).toHaveStyleRule('font-weight', '500');
+  });
+
   test('NÃO DEVE ter o line-height QUANDO a propriedade $alturaDeLinha não for informada', () => {
     const {container} = render(<TextStyled>Teste</TextStyled>);
     expect(container.firstChild).not.toHaveStyleRule('line-height');

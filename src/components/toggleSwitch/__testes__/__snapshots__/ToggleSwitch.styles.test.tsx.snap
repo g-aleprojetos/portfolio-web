@@ -7,13 +7,8 @@ exports[`ToggleSwitch.styles Input DEVE ser igual ao snapshot 1`] = `
   height: 0;
 }
 
-.c0:checked+span {
-  background-color: #15154E;
-}
-
 .c0:checked+span:before {
   transform: translateX(23.4px);
-  background-color: #ffffff;
 }
 
 .c0:focus+span {

@@ -32,11 +32,14 @@ export const HeaderContainer = styled.header`
   padding-top: ${margin.small}px;
   padding-left: ${margin.xxlarge}px;
   box-sizing: border-box;
-  z-index: 10;
 
   @media screen and (${media.tablet}) {
     justify-content: center;
-    padding: 0px;
+    padding-top: 0;
+  }
+
+  @media screen and (${media.mobile}) {
+    padding-left: 0;
   }
 `;
 
