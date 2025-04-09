@@ -33,12 +33,12 @@ export const HeaderContainer = styled.header`
   padding-left: ${margin.xxlarge}px;
   box-sizing: border-box;
 
-  @media screen and (${media.tablet}) {
+  @media screen and (${media.laptop}) {
     justify-content: center;
-    padding-top: 0;
   }
 
-  @media screen and (${media.mobile}) {
+  @media screen and (${media.tablet}) {
+    justify-content: center;
     padding-left: 0;
   }
 `;
@@ -78,7 +78,7 @@ export const Nav = styled.nav`
   padding-right: ${margin.large}px;
   gap: ${margin.xsmall}px;
 
-  @media screen and (${media.tablet}) {
+  @media screen and (${media.laptop}) {
     display: none;
   }
 `;
