@@ -1,6 +1,5 @@
 import {colors} from 'resources/colors';
 import {margin} from 'resources/margins';
-import {media} from 'resources/media';
 import styled from 'styled-components';
 
 export interface PropsHumburger {
@@ -15,7 +14,7 @@ export interface Props {
 }
 
 export const Container = styled.button<Props>`
-  display: none;
+  display: flex;
   justify-content: space-around;
   flex-flow: column nowrap;
   width: ${({$tamanho}) => $tamanho ?? margin.small}px;
@@ -26,10 +25,6 @@ export const Container = styled.button<Props>`
   background-color: transparent;
   cursor: pointer;
   z-index: 100;
-
-  @media ${media.tablet} {
-    display: flex;
-  }
 `;
 
 const Span = styled.span<Props>`

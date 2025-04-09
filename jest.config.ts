@@ -36,6 +36,7 @@ const config: JestConfigWithTsJest = {
   },
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts', '@testing-library/react'],
   testEnvironment: 'jsdom',
+  testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[tj]s?(x)'],
   testPathIgnorePatterns: ['/node_modules/'],
   transform: {
     '^.+\\.svg$': 'jest-transformer-svg',
