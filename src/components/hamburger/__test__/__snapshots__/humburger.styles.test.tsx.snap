@@ -2,7 +2,7 @@
 
 exports[`hamburger.styles Container DEVE ser igual ao snapshot 1`] = `
 .c0 {
-  display: none;
+  display: flex;
   justify-content: space-around;
   flex-flow: column nowrap;
   width: 16px;
@@ -15,12 +15,6 @@ exports[`hamburger.styles Container DEVE ser igual ao snapshot 1`] = `
   z-index: 100;
 }
 
-@media (max-width: 768px) {
-  .c0 {
-    display: flex;
-  }
-}
-
 <div>
   <button
     class="c0"
@@ -30,7 +24,7 @@ exports[`hamburger.styles Container DEVE ser igual ao snapshot 1`] = `
 
 exports[`hamburger.styles Container DEVE ser igual ao snapshot QUANDO $tamanho for passado pela props 1`] = `
 .c0 {
-  display: none;
+  display: flex;
   justify-content: space-around;
   flex-flow: column nowrap;
   width: 32px;
@@ -41,12 +35,6 @@ exports[`hamburger.styles Container DEVE ser igual ao snapshot QUANDO $tamanho f
   background-color: transparent;
   cursor: pointer;
   z-index: 100;
-}
-
-@media (max-width: 768px) {
-  .c0 {
-    display: flex;
-  }
 }
 
 <div>
