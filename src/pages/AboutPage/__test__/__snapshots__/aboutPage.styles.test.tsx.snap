@@ -8,7 +8,6 @@ exports[`AboutPage.styles Container DEVE ser igual ao snapshot 1`] = `
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: calc(100vh - 116px);
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {

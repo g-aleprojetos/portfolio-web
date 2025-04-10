@@ -8,14 +8,13 @@ export interface ExtraProps {
 export const Container = styled.div<ExtraProps>`
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100vh;
   background-color: ${({$backgroundblack}) =>
     $backgroundblack ? colors.background02 : colors.darkgray};
 `;
 
 export const Content = styled.div`
   display: flex;
-  position: fixed;
   width: 100%;
   height: 100%;
   margin-top: 116px;

@@ -43,7 +43,7 @@ export const Container = styled.aside<PropsExtra>`
   transition: width 0.4s;
   z-index: 2;
 
-  @media screen and (min-width: ${devices.mobile}px) and (max-width: ${devices.laptop}px) {
+  @media screen and (min-width: ${devices.mobilePlus}px) and (max-width: ${devices.laptop}px) {
     display: flex;
   }
 `;

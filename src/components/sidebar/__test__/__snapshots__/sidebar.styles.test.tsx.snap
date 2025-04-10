@@ -64,7 +64,7 @@ exports[`Header.styles Container DEVE ser igual ao snapshot 1`] = `
   z-index: 2;
 }
 
-@media screen and (min-width: 425px) and (max-width: 1023px) {
+@media screen and (min-width: 426px) and (max-width: 1023px) {
   .c0 {
     display: flex;
   }
@@ -91,7 +91,7 @@ exports[`Header.styles Container DEVE ser igual ao snapshot QUANDO $openMenu for
   z-index: 2;
 }
 
-@media screen and (min-width: 425px) and (max-width: 1023px) {
+@media screen and (min-width: 426px) and (max-width: 1023px) {
   .c0 {
     display: flex;
   }

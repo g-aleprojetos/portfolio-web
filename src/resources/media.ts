@@ -1,6 +1,7 @@
 export const devices = {
   xmobile: 375,
   mobile: 425,
+  mobilePlus: 426,
   tablet: 768,
   laptop: 1023,
   xlaptop: 1440,

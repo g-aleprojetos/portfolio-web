@@ -106,6 +106,23 @@ describe('Dropdown', () => {
         background: ${colors.gunmetal}
       `);
     });
+
+    test('Deve fechar o dropdown ao clicar fora dele', () => {
+      setup();
+      const dropdown = screen.getByTestId('dropdown-select');
+
+      fireEvent.click(dropdown);
+      expect(screen.queryByTestId('dropdown-menu')).toHaveStyle(
+        'display: block',
+      );
+
+      fireEvent.mouseDown(document.body);
+
+      expect(screen.queryByTestId('dropdown-menu')).toHaveStyle(
+        'display: none',
+      );
+    });
+
     describe('Dropdown - Resolved Language', () => {
       test('Deve renderizar o idioma inglês como opção selecionada quando resolvedLanguage é "en"', () => {
         useTranslationMock.mockReturnValue({
