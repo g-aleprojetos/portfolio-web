@@ -42,7 +42,6 @@ export const Flag = styled(Image).attrs({
 
 export const Menu = styled.ul<ExtraProps>`
   position: absolute;
-  list-style: none;
   background: ${({$themeDark}) =>
     $themeDark ? colors.background04 : colors.gunmetal};
   border: 1px solid
@@ -65,7 +64,7 @@ export const MenuItem = styled.li<ExtraProps>`
   padding: 12px 8px;
   margin: ${margin.xxsmall}px;
   border-radius: ${margin.xsmall}px;
-  cursor: pointer;
+  cursor: ${({$active}) => ($active ? 'default' : 'pointer')};
   background: ${({$active, $themeDark}) =>
     $themeDark
       ? $active
@@ -74,11 +73,6 @@ export const MenuItem = styled.li<ExtraProps>`
       : $active
         ? colors.raisinBlack
         : 'transparent'};
-
-  &:hover {
-    background: ${({$themeDark}) =>
-      $themeDark ? colors.darkerCadetGrey : colors.jet};
-  }
 `;
 
 export const Select = styled.div<ExtraProps>`
@@ -123,7 +117,9 @@ export const Selected = styled.span`
   gap: ${margin.xsmall}px;
 `;
 
-export const Texto = styled(Text).attrs<ExtraProps>(({$themeDark}) => ({
-  color: $themeDark ? colors.background01 : colors.black,
-  cursor: 'pointer',
-}))``;
+export const Texto = styled(Text).attrs<ExtraProps>(
+  ({$themeDark, $active}) => ({
+    color: $themeDark ? colors.background01 : colors.black,
+    cursor: $active ? 'default' : 'pointer',
+  }),
+)``;

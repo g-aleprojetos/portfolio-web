@@ -84,12 +84,19 @@ describe('Image.styles', () => {
     expect(container).toMatchSnapshot();
   });
 
-  test('MenuItem DEVE ter background específico ao receber as propriedades $active e $themeDark', () => {
+  test('MenuItem DEVE ser igual ao snapshot QUANDO receber as propriedades $active', () => {
+    const {container} = render(<S.MenuItem $active={true} />);
+    expect(container).toMatchSnapshot();
+  });
+
+  test('MenuItem DEVE ser igual ao snapshot QUANDO receber as propriedades e $themeDark', () => {
+    const {container} = render(<S.MenuItem $themeDark={true} />);
+    expect(container).toMatchSnapshot();
+  });
+
+  test('MenuItem DEVE ser igual ao snapshot QUANDO receber as propriedades $active e $themeDark', () => {
     const {container} = render(<S.MenuItem $active={true} $themeDark={true} />);
-    expect(container.firstChild).toHaveStyleRule(
-      'background',
-      `${colors.midGray}`,
-    );
+    expect(container).toMatchSnapshot();
   });
 
   test('Select DEVE ser igual ao snapshot', () => {
@@ -166,17 +173,6 @@ describe('Image.styles', () => {
     expect(container.firstChild).toHaveStyleRule(
       'color',
       `${colors.background01}`,
-    );
-  });
-
-  test('MenuItem DEVE mudar a cor ao receber hover e a propriedade $themeDark', () => {
-    const {container} = render(<S.MenuItem $themeDark={true} />);
-    expect(container.firstChild).toHaveStyleRule(
-      'background',
-      `${colors.darkerCadetGrey}`,
-      {
-        modifier: ':hover',
-      },
     );
   });
 });
