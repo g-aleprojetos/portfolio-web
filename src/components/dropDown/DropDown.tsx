@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useMemo} from 'react';
+import React, {useState, useEffect, useMemo, useRef} from 'react';
 import {useTranslation} from 'react-i18next';
 import {languages, namespaces} from 'utils/i18n/i18n.constants';
 import {useBackgroundContext} from 'context/background';
@@ -21,6 +21,7 @@ export const Dropdown: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState<IOption | null>(null);
   const [activeOption, setActiveOption] = useState<IOption | null>(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const options = useMemo(
     () => [
@@ -66,6 +67,22 @@ export const Dropdown: React.FC = () => {
     }
   }, [i18n.resolvedLanguage, options]);
 
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
   const handleSelectClick = () => {
     setIsOpen(!isOpen);
   };
@@ -78,7 +95,7 @@ export const Dropdown: React.FC = () => {
   };
 
   return (
-    <S.DropdownContainer>
+    <S.DropdownContainer ref={dropdownRef}>
       <S.Select
         data-testid="dropdown-select"
         $themeDark={themeDark}
@@ -108,7 +125,11 @@ export const Dropdown: React.FC = () => {
             data-testid={option.testId}>
             <S.ContainerOption>
               <S.Flag src={option.icon} alt={option.alt()} />
-              <S.Texto $themeDark={!themeDark}>{option.idioma()}</S.Texto>
+              <S.Texto
+                $themeDark={!themeDark}
+                $active={activeOption === option}>
+                {option.idioma()}
+              </S.Texto>
             </S.ContainerOption>
           </S.MenuItem>
         ))}

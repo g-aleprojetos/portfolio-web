@@ -16,7 +16,6 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: calc(100vh - 116px);
 
   @media screen and (min-width: ${devices.tablet}px) and (max-width: ${devices.laptop}px) {
     padding-left: ${margin.xxlarge}px;

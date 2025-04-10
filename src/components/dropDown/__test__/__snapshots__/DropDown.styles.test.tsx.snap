@@ -82,7 +82,6 @@ exports[`Image.styles Flag DEVE ser igual ao snapshot 1`] = `
 exports[`Image.styles Menu DEVE ser igual ao snapshot 1`] = `
 .c0 {
   position: absolute;
-  list-style: none;
   background: #323741;
   border: 1px solid #363a43;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -115,8 +114,55 @@ exports[`Image.styles MenuItem DEVE ser igual ao snapshot 1`] = `
   background: transparent;
 }
 
-.c0:hover {
-  background: #2a2d35;
+<div>
+  <li
+    class="c0"
+  />
+</div>
+`;
+
+exports[`Image.styles MenuItem DEVE ser igual ao snapshot QUANDO receber as propriedades $active 1`] = `
+.c0 {
+  display: flex;
+  padding: 12px 8px;
+  margin: 4px;
+  border-radius: 8px;
+  cursor: default;
+  background: #23242a;
+}
+
+<div>
+  <li
+    class="c0"
+  />
+</div>
+`;
+
+exports[`Image.styles MenuItem DEVE ser igual ao snapshot QUANDO receber as propriedades $active e $themeDark 1`] = `
+.c0 {
+  display: flex;
+  padding: 12px 8px;
+  margin: 4px;
+  border-radius: 8px;
+  cursor: default;
+  background: #b9bcc4;
+}
+
+<div>
+  <li
+    class="c0"
+  />
+</div>
+`;
+
+exports[`Image.styles MenuItem DEVE ser igual ao snapshot QUANDO receber as propriedades e $themeDark 1`] = `
+.c0 {
+  display: flex;
+  padding: 12px 8px;
+  margin: 4px;
+  border-radius: 8px;
+  cursor: pointer;
+  background: transparent;
 }
 
 <div>
